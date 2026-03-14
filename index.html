@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>엔터문화연구소 — 글로벌 주간 브리핑 아카이브</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --lime: #C8FF00;
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --gray-400: #999999;
+  --gray-500: #666666;
+  --gray-600: #444444;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.masthead {
+  background: var(--lime);
+  color: var(--black);
+  padding: 40px 48px 36px;
+}
+.masthead-title {
+  font-family: 'Syne', 'Noto Sans KR', sans-serif;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+}
+.masthead-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 48px 80px;
+}
+
+.section-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--lime);
+  padding-bottom: 14px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--gray-600);
+}
+
+.issue-list {
+  list-style: none;
+}
+.issue-item {
+  border-bottom: 1px solid var(--gray-600);
+}
+.issue-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 20px 0;
+  text-decoration: none;
+  color: var(--white);
+  transition: color 0.2s;
+}
+.issue-link:hover {
+  color: var(--lime);
+}
+.issue-title {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.issue-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: var(--gray-400);
+  white-space: nowrap;
+  margin-left: 24px;
+}
+.issue-link:hover .issue-date {
+  color: var(--lime);
+}
+
+.footer {
+  background: var(--lime);
+  color: var(--black);
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-brand {
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.footer-tags {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  opacity: 0.4;
+}
+
+@media (max-width: 600px) {
+  .masthead { padding: 28px 20px 24px; }
+  .content { padding: 32px 20px 60px; }
+  .footer { padding: 20px; }
+  .issue-link { flex-direction: column; gap: 4px; }
+  .issue-date { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <h1 class="masthead-title">엔터문화연구소<br>글로벌 주간 브리핑</h1>
+  <div class="masthead-sub">Weekly Business Briefing: US · China · Japan</div>
+</header>
+
+<div class="content">
+  <div class="section-label">Archive</div>
+  <ul class="issue-list">
+
+    <!-- ✅ 새 호를 여기에 추가한다. 가장 최근 호가 맨 위. -->
+
+    <li class="issue-item">
+      <a class="issue-link" href="NEWSPAPER_0314.html">
+        <span class="issue-title">Vol. 03 — Paramount-WBD 합병, NVIDIA $681억, Disney CEO 교체</span>
+        <span class="issue-date">2026.03.14</span>
+      </a>
+    </li>
+
+    <!-- 아래는 예시. 호가 추가될 때마다 위에 복붙해서 수정하면 된다.
+    <li class="issue-item">
+      <a class="issue-link" href="NEWSPAPER_0307.html">
+        <span class="issue-title">Vol. 02 — 제목을 여기에</span>
+        <span class="issue-date">2026.03.07</span>
+      </a>
+    </li>
+    -->
+
+  </ul>
+</div>
+
+<footer class="footer">
+  <div class="footer-brand">엔터문화연구소 × Claude</div>
+  <div class="footer-tags">Wave · Economy · IP · Relationship · Digital</div>
+</footer>
+
+</body>
+</html>
