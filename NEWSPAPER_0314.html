@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>엔터문화연구소 — 글로벌 주간 브리핑 2026.03.14</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --lime: #C8FF00;
+  --lime-dim: #a8d600;
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --gray-200: #e8e8e8;
+  --gray-300: #d0d0d0;
+  --gray-400: #999999;
+  --gray-500: #666666;
+  --gray-600: #444444;
+
+  --us: #0055FF;
+  --cn: #FF2D20;
+  --jp: #7C3AED;
+  --global: #E67700;
+
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-heading: 'Syne', 'Noto Sans KR', sans-serif;
+  --font-body: 'Noto Sans KR', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.masthead {
+  background: var(--lime);
+  color: var(--black);
+  padding: 40px 48px 36px;
+}
+.masthead-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+  margin-bottom: 24px;
+}
+.masthead-title {
+  font-family: var(--font-heading);
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+.masthead-sub {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+.tag-us { background: var(--us); color: #fff; }
+.tag-cn { background: var(--cn); color: #fff; }
+.tag-jp { background: var(--jp); color: #fff; }
+.tag-global { background: var(--global); color: #fff; }
+.tag-cat {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-left: 8px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--gray-600);
+  padding: 48px 0;
+}
+.hero-main {
+  padding-right: 48px;
+  border-right: 1px solid var(--gray-600);
+}
+.hero-main .article-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+.hero-main .article-lead {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--gray-300);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--gray-600);
+}
+.article-body {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--gray-300);
+  font-weight: 300;
+}
+.article-body p { margin-bottom: 12px; }
+
+.pull-quote {
+  margin: 24px 0;
+  padding: 20px 24px;
+  background: var(--lime);
+  color: var(--black);
+  border-radius: 2px;
+}
+.pull-quote p {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+  margin-bottom: 0 !important;
+}
+.pull-quote cite {
+  display: block;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 10px;
+  margin-top: 10px;
+  opacity: 0.5;
+  letter-spacing: 0.5px;
+}
+
+.hero-sidebar {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sidebar-card:first-child {
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--gray-600);
+}
+.sidebar-card .article-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: var(--white);
+}
+.sidebar-card .article-body { font-size: 13px; }
+
+.amount {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  font-weight: 700;
+  color: var(--lime);
+  white-space: nowrap;
+}
+
+.source {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--gray-500);
+  letter-spacing: 0.3px;
+}
+.source a {
+  color: var(--gray-400);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gray-600);
+  transition: all 0.2s;
+}
+.source a:hover { color: var(--lime); border-color: var(--lime); }
+
+.col-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--gray-600);
+}
+.col { padding: 40px 0; }
+.col:not(:last-child) {
+  padding-right: 36px;
+  margin-right: 36px;
+  border-right: 1px solid var(--gray-600);
+}
+.col-header {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  padding-bottom: 14px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--gray-600);
+}
+.col-article { margin-bottom: 32px; }
+.col-article:last-child { margin-bottom: 0; }
+.col-article .article-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+.col-article .article-body { font-size: 13px; }
+
+.analysis {
+  padding: 48px 0;
+}
+.analysis-header {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--lime);
+  padding-bottom: 14px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid var(--gray-600);
+}
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+}
+.analysis-num {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-style: italic;
+  color: var(--gray-600);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.analysis-item h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  color: var(--white);
+}
+.analysis-item p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--gray-300);
+  font-weight: 300;
+}
+
+.footer {
+  background: var(--lime);
+  color: var(--black);
+  padding: 32px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.footer-brand {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+.footer-legal {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.8;
+  opacity: 0.5;
+  max-width: 560px;
+}
+.footer-tags {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  opacity: 0.4;
+  text-align: right;
+}
+.footer-fx {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 900px) {
+  .masthead { padding: 28px 20px 24px; }
+  .masthead-title { letter-spacing: -1px; }
+  .content { padding: 0 20px; }
+  .hero { grid-template-columns: 1fr; padding: 32px 0; }
+  .hero-main { padding-right: 0; border-right: none; padding-bottom: 32px; border-bottom: 1px solid var(--gray-600); }
+  .hero-sidebar { padding-left: 0; padding-top: 32px; }
+  .col-section { grid-template-columns: 1fr; }
+  .col:not(:last-child) { border-right: none; padding-right: 0; margin-right: 0; padding-bottom: 32px; margin-bottom: 0; border-bottom: 1px solid var(--gray-600); }
+  .analysis-grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer { padding: 24px 20px; flex-direction: column; }
+  .footer-tags { text-align: left; }
+}
+
+@media print {
+  body { background: #fff; color: #000; }
+  .masthead, .footer { background: #f0f0f0; color: #000; }
+  .amount { color: #000; font-weight: 700; }
+  .pull-quote { background: #f0f0f0; color: #000; }
+  .article-title { color: #000 !important; }
+  a { color: #000 !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-date">2026년 3월 14일 토요일 (3.9&ndash;14)</div>
+  <h1 class="masthead-title">엔터문화연구소<br>글로벌 주간 브리핑</h1>
+  <div class="masthead-sub">Weekly Business Briefing: US &middot; China &middot; Japan</div>
+</header>
+
+<div class="content">
+
+<!-- HERO -->
+<section class="hero">
+  <article class="hero-main">
+    <span class="tag tag-us">US</span><span class="tag-cat">M&amp;A &middot; Leadership</span>
+    <h2 class="article-title">David Ellison, 버뱅크 입성 &mdash; $1,100억 합병의 설계자가 WBD 임원 200명 앞에 섰다</h2>
+    <p class="article-lead">Paramount Skydance CEO David Ellison이 3월 10일 Warner Bros. 버뱅크 스튜디오 로트를 방문해 WBD 수석 임원 200여 명과 직접 대면했다. 합병 발표 열흘 만에, 인수자가 피인수 기업의 심장부로 걸어 들어간 것이다.</p>
+    <div class="article-body">
+      <p>스티븐 J. 로스 극장에 모인 건 워너 영화·TV 스튜디오, HBO, HBO Max 등 WBD 전 사업부의 시니어 리더십이었다. 거래 규모는 WBD 주식 1주당 <span class="amount">$31</span> 현금 매수, 기업 가치 약 <span class="amount">$1,100억(₩1,639조)</span>. 시너지 효과로 최소 <span class="amount">$60억(₩8.9조)</span>의 비용 절감이 예고된 상황이니, 이 자리에 앉은 사람들은 &lsquo;비용 절감&rsquo;이라는 단어가 무엇을 의미하는지 누구보다 잘 알고 있었을 것이다.</p>
+      <p>가장 의미심장한 건 회의 후 벌어진 일이다. Ellison이 HBO·HBO Max 콘텐츠 총괄 Casey Bloys와 별도 점심을 한 것. 2027년 계약 만료를 앞둔 Bloys는 합병 후 통합 회사가 반드시 붙잡아야 할 인물이다. HBO라는 브랜드의 가치 없이 이 거래는 성립하지 않는다.</p>
+      <div class="pull-quote">
+        <p>&ldquo;통합 리니어 사업을 합치면 콘텐츠와 스포츠 양쪽에서 거대한 규모를 확보하게 된다. 이 규모 덕분에 독립 운영보다 훨씬 오래, 훨씬 건강하게 사업을 유지할 수 있다.&rdquo;</p>
+        <cite>&mdash; David Ellison, Paramount Skydance CEO</cite>
+      </div>
+      <p>Ellison은 Netflix 거래와 달리 CNN·Discovery Channel 등 케이블 네트워크를 분리하지 않고 통합 운영하겠다고 밝혔다. Paramount+와 HBO Max를 하나로 합쳐 구독자 2억 명 이상의 초대형 스트리밍을 만들겠다는 구상도 확인했다. FCC 의장 Brendan Carr는 이 거래가 Netflix 제안보다 &ldquo;훨씬 깔끔하다&rdquo;며 빠른 승인을 시사한 바 있다. WBD 주주 투표는 이른 봄, 목표 클로징은 2026년 3분기.</p>
+    </div>
+    <span class="source">출처: <a href="https://deadline.com/2026/03/paramount-ceo-david-ellison-warner-bros-discovery-merger-1236749350/" target="_blank">Deadline</a> &middot; <a href="https://www.newscaststudio.com/2026/03/11/paramount-wbd-merger-ellison-visits-wbd/" target="_blank">NewscastStudio</a> &middot; <a href="https://www.cnbc.com/2026/03/03/fcc-chair-brendan-carr-wbd-paramount-merger-deal-netflix.html" target="_blank">CNBC</a> (Mar 3&ndash;11)</span>
+  </article>
+
+  <div class="hero-sidebar">
+    <article class="sidebar-card">
+      <span class="tag tag-us">US</span><span class="tag-cat">Streaming</span>
+      <h2 class="article-title">BET+ 폐쇄, Paramount+로 흡수 &mdash; 3년 전 3개였던 SVOD가 드디어 하나로</h2>
+      <div class="article-body">
+        <p>Paramount가 Tyler Perry Studios의 BET+ 지분(약 25%)을 매입하고, 6월부터 1,000시간 이상의 BET+ 콘텐츠를 Paramount+로 이관한다. Showtime에 이어 두 번째 흡수 합병. 3년 전 3개 SVOD 플랫폼을 운영하던 회사에 이제 단 하나만 남는다.</p>
+        <p>BET+ 구독자 350만 명은 작아 보이지만, Paramount+의 8,000만 글로벌 가입자 기반으로 옮기면 도달 범위가 20배 이상 확대된다. WBD 합병 후에는 HBO Max까지 한 지붕 아래로. Perry는 2028년까지 9자릿수(달러) 규모의 콘텐츠 계약으로 제작을 계속한다.</p>
+      </div>
+      <span class="source">출처: <a href="https://variety.com/2026/tv/news/bet-plus-shutting-down-paramount-skydance-axquire-tyler-perry-stake-1236687482/" target="_blank">Variety</a> &middot; <a href="https://deadline.com/2026/03/bet-plus-folded-paramount-plus-tyler-perry-1236752222/" target="_blank">Deadline</a> (Mar 13)</span>
+    </article>
+
+    <article class="sidebar-card">
+      <span class="tag tag-us">US</span><span class="tag-cat">Streaming &middot; Pricing</span>
+      <h2 class="article-title">Amazon &lsquo;Prime Video Ultra&rsquo; &mdash; 광고 안 보려면 월 $5, 67% 인상</h2>
+      <div class="article-body">
+        <p>Amazon이 4월 10일부터 Prime Video 무광고 구독을 &lsquo;Prime Video Ultra&rsquo;로 리브랜딩하며 월 <span class="amount">$2.99(₩4,455)</span>에서 <span class="amount">$4.99(₩7,435)</span>로 올린다. Prime 기본 회비 <span class="amount">$14.99(₩22,335)</span>/월 위에 추가되니, 광고 없는 스트리밍의 연간 비용은 약 <span class="amount">$240(₩35.8만)</span>.</p>
+        <p>반대급부로 동시 스트림 5개(기존 3개), 오프라인 다운로드 100편(기존 25편), 4K/UHD 독점 접근을 준다. 2024년 광고를 도입한 지 2년 만에 무광고 가격을 67%나 올린 셈이다. &lsquo;기본은 광고, 프리미엄은 돈&rsquo;이라는 이중 수익 공식이 업계의 표준이 되어가고 있다.</p>
+      </div>
+      <span class="source">출처: <a href="https://variety.com/2026/streaming/news/amazon-prime-video-ultra-no-ads-price-increase-1236687124/" target="_blank">Variety</a> &middot; <a href="https://www.aboutamazon.com/news/entertainment/prime-video-ultra-ad-free-streaming-subscription" target="_blank">Amazon</a> (Mar 13)</span>
+    </article>
+  </div>
+</section>
+
+<!-- 3-COL -->
+<section class="col-section">
+
+  <div class="col">
+    <div class="col-header">China</div>
+    <article class="col-article">
+      <span class="tag tag-cn">CN</span><span class="tag-cat">Policy &middot; Tech</span>
+      <h3 class="article-title">선전 CSFF 개막 &mdash; 블록체인 &lsquo;좋은 드라마&rsquo; 동맹과 AI 콘텐츠 전시관 첫 등장</h3>
+      <div class="article-body">
+        <p>3월 13일, 중국 최대 영상산업 행사인 CSFF(중국국제뉴미디어단편영화제)가 선전에서 개막했다. 2,000개 이상 기업, 5,000명 이상의 업계 전문가가 모인 역대 최대 규모다. 핵심은 국가광전총국(NRTA)이 출범시킨 &ldquo;주하오칸(聚好看)&rdquo; 블록체인 콘텐츠 유통 동맹이다. 웹드라마와 숏드라마가 주요 방송 플랫폼에 도달하되, 방영 데이터와 수익 분배를 블록체인으로 추적하는 구조다.</p>
+        <p>AI 전시관이 처음 설치돼 Tencent Cloud, Alibaba Cloud가 참여했고, 춘절 갈라에 사용된 AI 모션캡처 시스템 Seedance도 시연됐다. iQiyi 창업자 공위(Gong Yu)가 AI와 영상 제작의 관계를 기조 연설했다. 124개국에서 500편 이상의 숏필름이 접수됐고, APEC 경제권 대상 신규 시상 부문도 신설됐다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.prnewswire.com/news-releases/showbiz-pros-gather-at-shenzhen-festival-302713496.html" target="_blank">PRNewswire</a> &middot; <a href="https://macaonews.org/life/arts-culture/5th-china-international-new-media-short-film-festival-shenzhen/" target="_blank">Macao News</a> (Mar 13)</span>
+    </article>
+
+    <article class="col-article">
+      <span class="tag tag-cn">CN</span><span class="tag-cat">Market Data</span>
+      <h3 class="article-title">중국 숏드라마, 해외 인앱 매출 $18.5억 돌파 &mdash; 선전이 수출의 절반</h3>
+      <div class="article-body">
+        <p>DataEye 창업자 왕샹빈이 CSFF에서 공개한 숫자. 2025년 1~10월 기준, 중국 숏드라마의 해외 인앱 결제 매출이 <span class="amount">$18.47억(₩2.75조)</span>을 돌파했다. 선전 소재 기업이 중국 전체 숏드라마 수출의 50% 이상을 차지한다.</p>
+        <p>이건 영화(극장 유통)도, 드라마(OTT 라이선싱)도 아닌 &lsquo;제3의 포맷&rsquo;이 독자적인 글로벌 무역로를 열어버렸다는 뜻이다. 정부가 블록체인으로 수익 구조를 투명화하고 APEC 차원의 공동 제작 이니셔티브를 밀고 있다는 건, 일시적 유행이 아니라 구조적 산업으로 키우겠다는 의지의 표현이다. 올해 APEC 정상회의가 선전에서 열린다는 점도 우연이 아니다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.prnewswire.com/news-releases/showbiz-pros-gather-at-shenzhen-festival-302713496.html" target="_blank">PRNewswire</a> (Mar 13)</span>
+    </article>
+  </div>
+
+  <div class="col">
+    <div class="col-header">Japan</div>
+    <article class="col-article">
+      <span class="tag tag-jp">JP</span><span class="tag-cat">Market Data</span>
+      <h3 class="article-title">일본 만화 시장 7년 만에 역성장 &mdash; 그런데 해외 매출은 처음으로 내수를 넘었다</h3>
+      <div class="article-body">
+        <p>일본출판협회에 따르면 2025년 일본 만화 시장 규모가 전년 대비 3.2% 축소됐다. 7년 연속 성장이 처음 꺾인 것이다. 물리적 단행본 판매 감소와 해외 불법 복제 확산이 복합적으로 작용했다.</p>
+        <p>역설적인 건 같은 시기 해외 애니메이션 매출이 26% 급증해 <span class="amount">2.17조 엔($145.6억/₩21.7조)</span>을 기록하며, 사상 처음 국내 매출을 추월했다는 점이다(일본애니메이션협회). 글로벌 만화 시장은 2030년까지 <span class="amount">$478.2억(₩7.12조)</span>으로 성장 전망. 일본이 만들어내는 가치의 크기는 커지고 있다. 하지만 그 가치를 누가 가져가느냐 &mdash; 일본의 창작자인가, 글로벌 플랫폼인가 &mdash; 는 아직 결정되지 않았다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.animenewsnetwork.com/news/2026-03-03/manga-market-in-japan-shrinks-for-1st-time-in-7-years-in-2025/.234838" target="_blank">Anime News Network</a> (Mar 3)</span>
+    </article>
+
+    <article class="col-article">
+      <span class="tag tag-jp">JP</span><span class="tag-cat">Leadership</span>
+      <h3 class="article-title">Amazon MGM, WBD Japan 대표 Buddy Marini 영입 &mdash; 일본 오리지널 슬레이트 본격화</h3>
+      <div class="article-body">
+        <p>Amazon MGM Studios가 WBD Japan 대표를 지낸 Buddy Marini를 일본 사업 총괄로 영입했다(3월 6일 부임). 도쿄 주재로 영화·TV·애니메이션을 아우르는 일본 오리지널 슬레이트를 이끈다. 25년 이상의 아시아 미디어 경력자로, Hulu Japan CEO·만화 플랫폼 Mangamo 창업·Avex Asia 대표를 역임했다.</p>
+        <p>WBD Japan에서 300명 조직을 이끌던 인물이 Amazon으로 옮겼다는 건, Paramount-WBD 합병의 여파가 태평양을 건넜다는 뜻이다. Netflix가 &lt;Alice in Borderland&gt;와 &lt;유유백서&gt;로 선점한 일본 IP 시장에서, Amazon이 경영진 수준의 투자로 정면 승부를 시작했다.</p>
+      </div>
+      <span class="source">출처: <a href="https://variety.com/2026/film/news/amazon-mgm-studios-buddy-marini-japan-1236680798/" target="_blank">Variety</a> (Mar 7)</span>
+    </article>
+  </div>
+
+  <div class="col">
+    <div class="col-header">Global</div>
+    <article class="col-article">
+      <span class="tag tag-global">Global</span><span class="tag-cat">Labor &middot; AI</span>
+      <h3 class="article-title">WGA, 3월 16일 AMPTP와 협상 개시 &mdash; AI 보호 확대와 의료보험 기금이 핵심</h3>
+      <div class="article-body">
+        <p>미국작가조합(WGA)이 3월 16일 월요일부터 AMPTP와 신규 계약 협상에 돌입한다. 현 MBA(최소기본계약)는 5월 1일 만료. 2023년 148일 파업의 수석 협상가 Ellen Stutzman이 다시 나서며, 조합원 97.4%가 요구안을 승인했다.</p>
+        <p>최우선 의제는 건강보험·연금 기금이다. 피크TV 이후 TV 작가 일자리가 42%나 줄면서 기금이 존속 위기에 놓였다. AI 보호 확대도 핵심으로, Disney-Sora식 IP 라이선싱에서 작가 창작물이 AI 학습에 사용될 때 보상받는 구조를 요구한다. 이미 2월부터 협상 중인 SAG-AFTRA는 AI 배우 대체 시 수수료를 부과하는 &lsquo;틸리 택스(Tilly Tax)&rsquo;를 제안해 업계의 이목을 끌고 있다.</p>
+      </div>
+      <span class="source">출처: <a href="https://deadline.com/2026/03/wga-west-leaders-talk-2026-bargaining-priorities-amptp-1236749232/" target="_blank">Deadline</a> &middot; <a href="https://nofilmschool.com/2026-wga-contract-negotiations" target="_blank">No Film School</a> (Mar 10&ndash;11)</span>
+    </article>
+
+    <article class="col-article">
+      <span class="tag tag-us">US</span><span class="tag-cat">Box Office</span>
+      <h3 class="article-title">Pixar &lt;Hoppers&gt; 글로벌 $1억 돌파 &mdash; 오리지널 애니메이션, 9년 만의 반등</h3>
+      <div class="article-body">
+        <p>Pixar의 오리지널 &lt;Hoppers&gt;가 개봉 첫 주말 글로벌 <span class="amount">$8,800만(₩1,311억)</span>으로 출발해, 12일 만에 누적 <span class="amount">$1억(₩1,490억)</span>을 넘겼다. 2017년 &lt;Coco&gt; 이후 Pixar 오리지널 최고 성적이다. 국내 <span class="amount">$4,600만(₩685억)</span>, 해외 40개 시장에서 <span class="amount">$4,200만(₩626억)</span>.</p>
+        <p>RT 94%, CinemaScore A등급. 제작비 <span class="amount">$1.5억(₩2,235억)</span>은 Pixar 기준 &lsquo;절약형&rsquo;이다. &lt;Elio&gt;(<span class="amount">$2,080만</span> 오프닝)와 &lt;Elemental&gt;(<span class="amount">$2,960만</span>)의 연속 부진 이후, &ldquo;Pixar 오리지널은 더 이상 안 통한다&rdquo;는 통념을 뒤집었다. 4월 초 &lt;슈퍼 마리오 갤럭시 무비&gt;까지 가족 경쟁작이 없어 긴 호흡의 흥행이 기대된다.</p>
+      </div>
+      <span class="source">출처: <a href="https://variety.com/2026/film/box-office/pixar-hoppers-box-office-global-opening-weekend-win-the-bride-flatlines-1236681863/" target="_blank">Variety</a> &middot; <a href="https://deadline.com/2026/03/box-office-hoppers-the-bride-1236745894/" target="_blank">Deadline</a> (Mar 8&ndash;9)</span>
+    </article>
+  </div>
+
+</section>
+
+<!-- ANALYSIS -->
+<section class="analysis">
+  <div class="analysis-header">Analysis</div>
+  <div class="analysis-grid">
+    <div class="analysis-item">
+      <div class="analysis-num">01</div>
+      <h3>모든 스트리밍은 결국 하나의 번들이 된다</h3>
+      <p>BET+가 사라졌다. 그 전에 Showtime이 사라졌고, 다음은 HBO Max가 합류할 차례다. Amazon은 광고 없는 경험에 $5를 더 얹고, 그 대가로 4K와 다운로드 100편을 준다. 어디서 많이 본 구조 아닌가. 이건 케이블TV의 기본형·프리미엄·스포츠 패키지와 정확히 같은 논리다. 수백 개의 독립 채널이 결국 서너 개의 번들로 수렴했듯, 스트리밍도 같은 길을 가고 있다. 차이가 있다면, 이번에는 번들을 만드는 주체가 콘텐츠를 직접 소유한다는 점이다. 그래서 질문의 방향이 달라진다 &mdash; 당신이 만드는 콘텐츠가 이 번들 안에 들어갈 자리가 있는가, 아니면 번들 바깥에서 독자적으로 살아남을 수 있는가.</p>
+    </div>
+    <div class="analysis-item">
+      <div class="analysis-num">02</div>
+      <h3>숏드라마라는 &lsquo;세 번째 길&rsquo;이 열렸다</h3>
+      <p>일본 만화의 해외 매출이 내수를 처음 넘어선 것과, 중국 숏드라마의 해외 인앱 결제가 연간 $18.5억을 찍은 것. 이 두 숫자를 나란히 놓으면 하나의 흐름이 보인다. 아시아 콘텐츠가 할리우드의 극장 유통도, OTT 라이선싱 계약도 거치지 않고 소비자에게 직접 도달하는 경로가 만들어졌다는 것. 선전이 블록체인으로 수익 분배를 투명화하겠다고 선언한 건, 이 시장을 &lsquo;실험&rsquo;이 아닌 &lsquo;산업&rsquo;으로 격상시키겠다는 의지다. Amazon이 WBD Japan 출신 임원을 데려와 일본 오리지널을 본격적으로 짜기 시작한 것도 같은 맥락이다. 아시아 IP의 가치는 이미 증명됐다. 문제는 그 가치를 실현하는 파이프라인이 아직 모자라다는 것이다.</p>
+    </div>
+    <div class="analysis-item">
+      <div class="analysis-num">03</div>
+      <h3>파업의 유산은 &lsquo;질문의 형태&rsquo;로 남는다</h3>
+      <p>2023년 WGA 파업이 남긴 가장 중요한 유산은 구체적인 계약 조항이 아니라, 하나의 질문 형태일지 모른다. &lsquo;AI가 기존 창작물을 학습할 때, 그건 재방송인가 새로운 창작인가?&rsquo; Disney가 Sora에 IP를 라이선싱하고, SAG-AFTRA가 &lsquo;틸리 택스&rsquo;로 AI 배우에 수수료를 매기겠다고 나선 건 모두 이 질문에 대한 각자의 답을 찾는 과정이다. 이번 주 월요일 시작되는 WGA-AMPTP 협상에서 이 질문이 어떤 숫자로 번역되는지가, 앞으로 10년간 할리우드 &mdash; 그리고 그 너머 모든 콘텐츠 산업 &mdash; 의 노동 구조를 정의하게 된다. 파업은 끝났다. 하지만 싸움의 프레임은 지금 막 세팅되는 중이다.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer class="footer">
+  <div>
+    <div class="footer-brand">엔터문화연구소 &times; Claude</div>
+    <div class="footer-legal">
+      본 뉴스레터는 AI 기반 큐레이션으로 제작되었으며, 인용된 모든 기사의 저작권은 원 매체에 귀속됩니다.<br>
+      모든 금액은 2026년 3월 13일 기준 환율($1 = &#8361;1,490)을 적용했습니다. 실제 환율과 차이가 있을 수 있습니다.
+    </div>
+  </div>
+  <div style="text-align:right;">
+    <div class="footer-fx">$1 = &#8361;1,490</div>
+    <div class="footer-tags">M&amp;A &middot; Streaming &middot; AI &middot; Labor &middot; Short Drama</div>
+  </div>
+</footer>
+
+</body>
+</html>
