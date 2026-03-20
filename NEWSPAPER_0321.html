@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>엔터문화연구소 — 글로벌 주간 브리핑 2026.03.21</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --lime: #C8FF00;
+  --lime-dim: #a8d600;
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --gray-200: #e8e8e8;
+  --gray-300: #d0d0d0;
+  --gray-400: #999999;
+  --gray-500: #666666;
+  --gray-600: #444444;
+  --us: #0055FF;
+  --cn: #FF2D20;
+  --jp: #7C3AED;
+  --global: #E67700;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-heading: 'Syne', 'Noto Sans KR', sans-serif;
+  --font-body: 'Noto Sans KR', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--black); color: var(--white); font-family: var(--font-body); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+.masthead { background: var(--lime); color: var(--black); padding: 40px 48px 36px; }
+.masthead-date { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.5px; opacity: 0.6; margin-bottom: 24px; }
+.masthead-title { font-family: var(--font-heading); font-size: clamp(42px, 6vw, 72px); font-weight: 800; line-height: 0.95; letter-spacing: -2px; margin-bottom: 20px; }
+.masthead-sub { font-family: var(--font-mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; }
+
+.content { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+
+.tag { display: inline-block; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; margin-bottom: 12px; }
+.tag-us { background: var(--us); color: #fff; }
+.tag-cn { background: var(--cn); color: #fff; }
+.tag-jp { background: var(--jp); color: #fff; }
+.tag-global { background: var(--global); color: #fff; }
+.tag-cat { font-family: var(--font-mono); font-size: 10px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; color: var(--gray-400); margin-left: 8px; }
+
+.hero { display: grid; grid-template-columns: 1.5fr 1fr; gap: 0; border-bottom: 1px solid var(--gray-600); padding: 48px 0; }
+.hero-main { padding-right: 48px; border-right: 1px solid var(--gray-600); }
+.hero-main .article-title { font-family: var(--font-display); font-size: clamp(28px, 3vw, 40px); font-weight: 400; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 20px; color: var(--white); }
+.hero-main .article-lead { font-family: var(--font-display); font-size: 17px; font-style: italic; line-height: 1.55; color: var(--gray-300); margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--gray-600); }
+.article-body { font-size: 14px; line-height: 1.75; color: var(--gray-300); font-weight: 300; }
+.article-body p { margin-bottom: 12px; }
+
+.pull-quote { margin: 24px 0; padding: 20px 24px; background: var(--lime); color: var(--black); border-radius: 2px; }
+.pull-quote p { font-family: var(--font-heading); font-size: 16px; font-weight: 600; line-height: 1.45; margin-bottom: 0 !important; }
+.pull-quote cite { display: block; font-family: var(--font-mono); font-style: normal; font-size: 10px; margin-top: 10px; opacity: 0.5; letter-spacing: 0.5px; }
+
+.hero-sidebar { padding-left: 40px; display: flex; flex-direction: column; }
+.sidebar-card { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.sidebar-card:first-child { padding-bottom: 32px; margin-bottom: 32px; border-bottom: 1px solid var(--gray-600); }
+.sidebar-card .article-title { font-family: var(--font-display); font-size: 22px; font-weight: 400; line-height: 1.2; margin-bottom: 14px; color: var(--white); }
+.sidebar-card .article-body { font-size: 13px; }
+
+.amount { font-family: var(--font-mono); font-size: 0.88em; font-weight: 700; color: var(--lime); white-space: nowrap; }
+
+.source { display: block; margin-top: 14px; font-family: var(--font-mono); font-size: 10px; color: var(--gray-500); letter-spacing: 0.3px; }
+.source a { color: var(--gray-400); text-decoration: none; border-bottom: 1px solid var(--gray-600); transition: all 0.2s; }
+.source a:hover { color: var(--lime); border-color: var(--lime); }
+
+.col-section { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border-bottom: 1px solid var(--gray-600); }
+.col { padding: 40px 0; }
+.col:not(:last-child) { padding-right: 36px; margin-right: 36px; border-right: 1px solid var(--gray-600); }
+.col-header { font-family: var(--font-heading); font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gray-500); padding-bottom: 14px; margin-bottom: 28px; border-bottom: 1px solid var(--gray-600); }
+.col-article { margin-bottom: 32px; }
+.col-article:last-child { margin-bottom: 0; }
+.col-article .article-title { font-family: var(--font-display); font-size: 20px; font-weight: 400; line-height: 1.2; margin-bottom: 12px; color: var(--white); }
+.col-article .article-body { font-size: 13px; }
+
+.analysis { padding: 48px 0; }
+.analysis-header { font-family: var(--font-heading); font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--lime); padding-bottom: 14px; margin-bottom: 36px; border-bottom: 1px solid var(--gray-600); }
+.analysis-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; }
+.analysis-num { font-family: var(--font-display); font-size: 56px; font-style: italic; color: var(--gray-600); line-height: 1; margin-bottom: 12px; }
+.analysis-item h3 { font-family: var(--font-display); font-size: 22px; font-weight: 400; line-height: 1.25; margin-bottom: 14px; color: var(--white); }
+.analysis-item p { font-size: 13.5px; line-height: 1.7; color: var(--gray-300); font-weight: 300; }
+
+.footer { background: var(--lime); color: var(--black); padding: 32px 48px; display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; }
+.footer-brand { font-family: var(--font-heading); font-size: 14px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 2px; }
+.footer-legal { font-family: var(--font-mono); font-size: 10px; line-height: 1.8; opacity: 0.5; max-width: 560px; }
+.footer-tags { font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; opacity: 0.4; text-align: right; }
+.footer-fx { font-family: var(--font-mono); font-size: 13px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+.nav-top { display: flex; justify-content: space-between; align-items: center; padding: 12px 48px; background: var(--black); border-bottom: 1px solid var(--gray-600); }
+.nav-top a { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.5px; color: var(--gray-400); text-decoration: none; transition: color 0.2s; }
+.nav-top a:hover { color: var(--lime); }
+.nav-vol { font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); letter-spacing: 0.5px; }
+
+.nav-bottom { display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; border-top: 1px solid var(--gray-600); background: var(--black); }
+.nav-bottom a { font-family: var(--font-mono); font-size: 12px; color: var(--gray-400); text-decoration: none; transition: color 0.2s; }
+.nav-bottom a:hover { color: var(--lime); }
+.nav-bottom .nav-disabled { font-family: var(--font-mono); font-size: 12px; color: var(--gray-600); pointer-events: none; }
+.nav-bottom .nav-center { font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); }
+.nav-bottom .nav-center a { color: var(--gray-400); }
+.nav-bottom .nav-center a:hover { color: var(--lime); }
+
+@media (max-width: 900px) {
+  .masthead { padding: 28px 20px 24px; }
+  .masthead-title { letter-spacing: -1px; }
+  .content { padding: 0 20px; }
+  .hero { grid-template-columns: 1fr; padding: 32px 0; }
+  .hero-main { padding-right: 0; border-right: none; padding-bottom: 32px; border-bottom: 1px solid var(--gray-600); }
+  .hero-sidebar { padding-left: 0; padding-top: 32px; }
+  .col-section { grid-template-columns: 1fr; }
+  .col:not(:last-child) { border-right: none; padding-right: 0; margin-right: 0; padding-bottom: 32px; margin-bottom: 0; border-bottom: 1px solid var(--gray-600); }
+  .analysis-grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer { padding: 24px 20px; flex-direction: column; }
+  .footer-tags { text-align: left; }
+  .nav-top { padding: 12px 20px; }
+  .nav-bottom { padding: 16px 20px; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  .masthead, .footer { background: #f0f0f0; color: #000; }
+  .amount { color: #000; font-weight: 700; }
+  .pull-quote { background: #f0f0f0; color: #000; }
+  .article-title { color: #000 !important; }
+  a { color: #000 !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV TOP -->
+<nav class="nav-top">
+  <a href="index.html">&larr; Archive</a>
+  <span class="nav-vol">Vol. 02</span>
+</nav>
+
+<header class="masthead">
+  <div class="masthead-date">2026년 3월 21일 토요일 (3.16&ndash;20)</div>
+  <h1 class="masthead-title">엔터문화연구소<br>글로벌 주간 브리핑</h1>
+  <div class="masthead-sub">Weekly Business Briefing: US &middot; China &middot; Japan</div>
+</header>
+
+<div class="content">
+
+<!-- HERO -->
+<section class="hero">
+  <article class="hero-main">
+    <span class="tag tag-us">US</span><span class="tag-cat">Leadership &middot; Strategy</span>
+    <h2 class="article-title">Josh D&rsquo;Amaro, Disney 제9대 CEO 취임 &mdash; &ldquo;Disney+는 우리 회사의 디지털 중심축이 될 것&rdquo;</h2>
+    <p class="article-lead">3월 18일, Bob Iger 시대가 공식 막을 내렸다. Disney Experiences 출신 Josh D&rsquo;Amaro가 28년 Disney 경력의 마지막 직함으로 CEO를 받았다. 같은 날 Dana Walden이 사장 겸 최고크리에이티브책임자(CCO)로 선임됐다 &mdash; Disney 역사상 처음으로 &lsquo;전사 크리에이티브 총괄&rsquo;이라는 타이틀이 만들어진 것이다.</p>
+    <div class="article-body">
+      <p>주주총회에서 D&rsquo;Amaro는 Disney+를 단순한 스트리밍 서비스가 아닌, 스토리·체험·게임·영화를 연결하는 &lsquo;디지털 포털&rsquo;로 진화시키겠다고 밝혔다. 올해 안에 Disney+와 Hulu를 하나의 통합 경험으로 합치겠다는 계획도 확인했다. 테마파크에는 <span class="amount">$600억(₩89.4조)</span> 규모의 글로벌 투자 프로그램이 진행 중이며, 9번째 크루즈 선박 &lsquo;Disney Believe&rsquo;도 발표됐다.</p>
+      <p>Iger는 2026년 말까지 D&rsquo;Amaro의 시니어 어드바이저이자 이사회 멤버로 남는다. 이사회에는 Apple 전 COO Jeff Williams가 새로 합류했고, 의장은 Morgan Stanley 출신 James Gorman이 맡고 있다. Iger의 유산 &mdash; 스튜디오 회생, 스트리밍 흑자화, ESPN 디지털 전환, 파크 투자 가속 &mdash; 은 정리됐다. D&rsquo;Amaro의 과제는 이 조각들을 하나의 생태계로 엮는 것이다.</p>
+      <div class="pull-quote">
+        <p>&ldquo;Disney+는 전통적 스트리밍을 넘어 우리 회사의 디지털 중심축으로 진화할 것이다 &mdash; 스토리, 체험, 게임, 영화를 완전히 새로운 방식으로 연결하는 포털이 될 것이다.&rdquo;</p>
+        <cite>&mdash; Josh D&rsquo;Amaro, Disney CEO, 2026 주주총회</cite>
+      </div>
+    </div>
+    <span class="source">출처: <a href="https://variety.com/2026/tv/news/bob-iger-disney-ceo-exit-josh-damaro-shareholder-meeting-1236692268/" target="_blank">Variety</a> &middot; <a href="https://www.bloomberg.com/news/articles/2026-03-18/disney-s-new-ceo-takes-over-amid-media-industry-turmoil" target="_blank">Bloomberg</a> &middot; <a href="https://deadline.com/2026/03/disney-ceo-josh-damaro-addresses-shareholders-1236759317/" target="_blank">Deadline</a> (Mar 18)</span>
+  </article>
+
+  <div class="hero-sidebar">
+    <article class="sidebar-card">
+      <span class="tag tag-us">US</span><span class="tag-cat">Antitrust &middot; Regulation</span>
+      <h2 class="article-title">Live Nation, DOJ와 합의했지만 &mdash; 36개 주가 &ldquo;분리하라&rdquo;며 재판 계속</h2>
+      <div class="article-body">
+        <p>3월 9일 DOJ가 Live Nation과 합의했다. Ticketmaster 분리 대신 <span class="amount">$2.8억(₩4,172억)</span>의 배상금과 티켓 판매의 50% 경쟁사 개방, 서비스 수수료 15% 상한 등이 조건이다. 하지만 36개 주와 워싱턴 D.C.는 합의를 거부하고 3월 16일 맨해튼 연방법원에서 재판을 재개했다.</p>
+        <p>재판에서는 Live Nation 직원들의 내부 문자가 공개됐다. 팬들을 &lsquo;바보&rsquo;라 부르고, 주차비 등 부대 수수료로 이익을 극대화하겠다는 내용이다. AEG Presents CEO Jay Marciano가 증인으로 출석해 Live Nation의 시장 지배력에 대해 증언했다. 주 검찰들은 DOJ의 합의가 16년간 반복된 &lsquo;구조를 바꾸지 않는 합의&rsquo;의 세 번째 판이라고 비판하고 있다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.nbcnews.com/business/consumer/ticketmaster-live-nation-settles-antitrust-case-rcna262392" target="_blank">NBC News</a> &middot; <a href="https://www.pbs.org/newshour/nation/states-continue-antitrust-case-against-live-nation-and-ticketmaster-after-doj-settles" target="_blank">PBS</a> &middot; <a href="https://www.claimsjournal.com/news/national/2026/03/18/336315.htm" target="_blank">Bloomberg</a> (Mar 9&ndash;18)</span>
+    </article>
+
+    <article class="sidebar-card">
+      <span class="tag tag-us">US</span><span class="tag-cat">Policy &middot; M&amp;A</span>
+      <h2 class="article-title">TikTok 매각의 숨겨진 청구서 &mdash; 미 재무부에 $100억 수수료</h2>
+      <div class="article-body">
+        <p>WSJ가 보도한 TikTok US 매각의 뒤안길. Oracle, Silver Lake, MGX 등 투자자들이 매수가 <span class="amount">$140억(₩2.09조)</span>과 별개로, 미 재무부에 약 <span class="amount">$100억(₩1.49조)</span>의 수수료를 지불하는 구조다. 일반적인 M&A 어드바이저리 수수료가 거래가의 1~2%인 점을 감안하면, 정부가 거래가의 70%를 가져가는 전례 없는 구조다.</p>
+        <p>상원 정보위원회 부위원장 Mark Warner는 3월 17일 재무장관 Scott Bessent에게 서한을 보내 법적 근거, 자금 용도, 이해충돌 여부 등 5개 항목의 해명을 요구했다. Warner는 이 거래가 정부 권력을 특정 기업과 개인에게 유리하게 행사하는 패턴이라고 지적했다.</p>
+      </div>
+      <span class="source">출처: <a href="https://variety.com/2026/digital/news/tiktok-us-trump-white-house-10-billion-payment-1236692774/" target="_blank">Variety</a> &middot; <a href="https://www.axios.com/2026/03/18/tiktok-sale-oracle-silver-lake" target="_blank">Axios</a> &middot; <a href="https://www.bloomberg.com/news/articles/2026-03-13/us-to-receive-10-billion-fee-for-tiktok-deal-wsj-reports" target="_blank">Bloomberg</a> (Mar 13&ndash;18)</span>
+    </article>
+  </div>
+</section>
+
+<!-- 3-COL -->
+<section class="col-section">
+
+  <div class="col">
+    <div class="col-header">China</div>
+    <article class="col-article">
+      <span class="tag tag-cn">CN</span><span class="tag-cat">Content &middot; Strategy</span>
+      <h3 class="article-title">Netflix, C-드라마 동시방영 본격화 &mdash; &lsquo;Pursuit of Jade&rsquo;가 연 글로벌 파이프라인</h3>
+      <div class="article-body">
+        <p>Netflix가 중국 시대극 &lsquo;Pursuit of Jade(逐玉)&rsquo;를 iQiyi·Tencent Video와 동시 송출하고 있다. 3월 6일 첫 회부터 40부작 전편을 중국 시청자와 같은 시간에 190개국에 제공하는 구조다. 2025~2026년 사이 Netflix의 C-드라마 동시방영 타이틀은 급증했고, &lsquo;Unveil: Jadewind&rsquo;, &lsquo;The Vendetta of An&rsquo; 등이 이미 같은 방식으로 서비스되고 있다.</p>
+        <p>Netflix는 중국 본토에서 직접 운영이 불가능하기 때문에, 대만을 중화권 오리지널 제작 거점으로 삼고 있다. 1월 공개된 2026년 중화권 슬레이트에는 7편의 신규 오리지널이 포함됐고, TAICCA와의 작가 워크숍, 제작 훈련 프로그램도 병행 중이다. K-드라마에 이은 C-드라마가 Netflix의 다음 아시아 성장 엔진이 될 수 있다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.primetimer.com/features/netflix-to-simulcast-chinese-drama-pursuit-of-jade-starting-march-6" target="_blank">Primetimer</a> &middot; <a href="https://variety.com/2026/tv/news/wallace-huo-ethan-ruan-gigi-leung-netflix-chinese-language-slate-1236643518/" target="_blank">Variety</a> (Jan 29 &middot; Mar 6)</span>
+    </article>
+
+    <article class="col-article">
+      <span class="tag tag-cn">CN</span><span class="tag-cat">Tech &middot; Infrastructure</span>
+      <h3 class="article-title">중국 15차 5개년 계획 비준 &mdash; Pro AV·몰입형 미디어, 2028년 $975억 시장으로</h3>
+      <div class="article-body">
+        <p>3월 18일, 중국의 15차 5개년 계획(2026~2030)이 공식 비준됐다. 핵심 키워드는 &lsquo;신질생산력(新質生產力)&rsquo;으로, AI 통합 시스템, LED 디스플레이, 몰입형 엔터테인먼트 인프라를 국가 전략 산업으로 육성한다. 중국 Pro AV 시장은 2028년까지 <span class="amount">$975억(₩14.5조)</span>으로 성장 전망이다.</p>
+        <p>4월 15~17일 베이징에서 열리는 InfoComm China 2026에는 400개 이상 기업이 참가한다. 20주년을 맞는 이 행사는 중국이 몰입형 콘텐츠 인프라 수출국으로 전환하고 있음을 보여주는 창구다. 숏드라마 수출과 결합하면, 콘텐츠와 하드웨어를 동시에 파는 전략이 윤곽을 드러낸다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.prnewswire.com/apac/news-releases/beijing-infocomm-china-2026-conference-lineup-presents-future-of-ai-in-tech-aligning-with-the-nations-next-strategic-five-year-plan-302715794.html" target="_blank">PRNewswire</a> (Mar 18)</span>
+    </article>
+  </div>
+
+  <div class="col">
+    <div class="col-header">Japan</div>
+    <article class="col-article">
+      <span class="tag tag-jp">JP</span><span class="tag-cat">M&amp;A &middot; Distribution</span>
+      <h3 class="article-title">Aniplex-Kadokawa, 합작 배급사 &lsquo;Animec&rsquo; 설립 &mdash; Sony·Kadokawa 동맹의 극장판 무기</h3>
+      <div class="article-body">
+        <p>Aniplex(Sony 자회사)와 Kadokawa가 애니메이션 극장판 배급·프로모션 전문 합작사 Animec을 설립했다. 회사명은 &lsquo;Anime&rsquo;와 &lsquo;Cinema&rsquo;의 합성어이자, 1980년대까지 발행된 동명의 애니메이션 잡지에 대한 오마주다.</p>
+        <p>이 JV의 본질은 TOHO에 빼앗기던 극장 배급 마진을 Sony-Kadokawa 진영으로 가져오는 것이다. Aniplex는 Demon Slayer·Fate·Sword Art Online, Kadokawa는 Re:Zero·KonoSuba 등 IP를 보유하고 있다. Sony가 2025년 1월 Kadokawa 지분 10%를 취득한 이후, HAYATE(제작 JV)에 이은 두 번째 합작이다. 글로벌 애니 극장 시장이 &lsquo;TOHO/GKIDS 진영&rsquo;과 &lsquo;Sony/Crunchyroll/Kadokawa 진영&rsquo;으로 양극화되고 있다.</p>
+      </div>
+      <span class="source">출처: <a href="https://group.kadokawa.co.jp/global/information/news_release/2026030202_en.html" target="_blank">Kadokawa</a> &middot; <a href="https://automaton-media.com/en/news/kadokawa-and-aniplex-establish-new-joint-anime-film-distribution-company-animec/" target="_blank">Automaton</a> (Mar 2)</span>
+    </article>
+
+    <article class="col-article">
+      <span class="tag tag-jp">JP</span><span class="tag-cat">Investment &middot; Gaming</span>
+      <h3 class="article-title">사우디 EGDC, Capcom 지분 5% 추가 취득 &mdash; 총 사우디 보유 비중 10% 초과</h3>
+      <div class="article-body">
+        <p>사우디 무함마드 빈 살만 왕세자의 MiSK 재단 산하 EGDC(Electronic Gaming Development Company)가 Capcom 주식 2,679만 주(5.03%)를 취득했다고 3월 13일 관동재무국에 보고했다. 목적은 &lsquo;순수 투자&rsquo;. EGDC는 이미 SNK를 96% 보유한 사우디 게임 투자의 핵심 기구다.</p>
+        <p>별도로 사우디 국부펀드(PIF)가 2022년에 Capcom 5%를 취득한 바 있어, 사우디의 총 Capcom 보유 비중은 10%를 넘는다. Resident Evil Requiem이 출시 2주 만에 600만 장을 돌파하며 Capcom 주가가 한 달간 13.4% 상승한 시점에 이뤄진 투자다. PIF는 닌텐도·넥슨·코에이 테크모에도 지분을 보유하고 있으며, EA에 대한 <span class="amount">$550억(₩8.2조)</span> 규모 인수도 진행 중인 것으로 알려져 있다.</p>
+      </div>
+      <span class="source">출처: <a href="https://variety.com/2026/gaming/asia/saudi-arabia-electronic-gaming-developemnt-stake-capcom-1236691117/" target="_blank">Variety</a> &middot; <a href="https://automaton-media.com/en/news/saudi-arabian-investment-firm-that-owns-snk-has-acquired-a-significant-stake-in-capcom/" target="_blank">Automaton</a> (Mar 13&ndash;16)</span>
+    </article>
+  </div>
+
+  <div class="col">
+    <div class="col-header">Global</div>
+    <article class="col-article">
+      <span class="tag tag-global">Global</span><span class="tag-cat">Labor &middot; Negotiation</span>
+      <h3 class="article-title">SAG-AFTRA, 합의 실패로 6월 재개 &mdash; WGA는 AMPTP 협상 시작</h3>
+      <div class="article-body">
+        <p>SAG-AFTRA와 AMPTP가 3월 16일 공동 성명을 내고, 이번 협상 라운드에서 합의에 이르지 못했음을 확인했다. 양측은 &ldquo;생산적인 협상이었고, 원래 계획보다 며칠 더 연장해 주말까지 작업했다&rdquo;고 밝혔으나, 정식 협상은 올 봄 후반(6월)에 재개하기로 했다. 현 계약 만기는 6월 30일이다.</p>
+        <p>SAG-AFTRA가 뒤로 밀린 건 WGA의 협상 스케줄 때문이다. WGA-AMPTP 협상이 3월 16일 시작됐고, 현 MBA 만료일은 5월 1일. 2023년 148일 파업을 이끈 Ellen Stutzman이 다시 수석 협상가로 나섰다. 세 길드(WGA·SAG-AFTRA·DGA) 모두 건강보험·연금 기금 위기를 최우선 과제로 꼽고 있으며, AI 학습 데이터 보상과 스트리밍 잔여금 확대도 핵심 의제다.</p>
+      </div>
+      <span class="source">출처: <a href="https://deadline.com/2026/03/sag-aftra-extends-negotiations-amptp-june-1236750573/" target="_blank">Deadline</a> &middot; <a href="https://variety.com/2026/film/news/wga-state-of-the-industry-report-1236674121/" target="_blank">Variety</a> (Mar 16)</span>
+    </article>
+
+    <article class="col-article">
+      <span class="tag tag-us">US</span><span class="tag-cat">Box Office</span>
+      <h3 class="article-title">Demon Slayer: Infinity Castle, 북미 재개봉으로 전 세계 $8억 돌파</h3>
+      <div class="article-body">
+        <p>Crunchyroll과 Sony가 3월 6일 북미에서 재개봉한 Demon Slayer: Infinity Castle이 전 세계 누적 <span class="amount">$8억(₩1.19조)</span>을 돌파했다. 853개 스크린 한정 상영임에도 재개봉 첫 주말 <span class="amount">$130만(₩19.4억)</span>을 기록하며 박스오피스 10위에 재진입했다.</p>
+        <p>역대 일본 영화 글로벌 흥행 1위이자, 애니메이션 영화 역대 최고 흥행작. 이번에 ScreenX(270도 파노라마) 포맷이 처음 적용됐다. 3부작 두 번째 영화 개봉 전 &lsquo;리마인더&rsquo; 개봉을 통해 프랜차이즈 열기를 유지하는 전략이다. Aniplex-Kadokawa의 Animec 설립과 함께 보면, Sony 진영의 애니 극장 비즈니스 확장 로드맵이 선명해진다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.animenewsnetwork.com/news/2026-03-09/1st-demon-slayer-infinity-castle-film-back-in-u.s-box-office-at-no.10/.235072" target="_blank">Anime News Network</a> &middot; <a href="https://www.koimoi.com/box-office/demon-slayer-infinity-castle-re-release-box-office-zooms-past-steven-spielbergs-oscar-winning-sci-fi-blockbuster/" target="_blank">Koimoi</a> (Mar 9&ndash;13)</span>
+    </article>
+  </div>
+
+</section>
+
+<!-- ANALYSIS -->
+<section class="analysis">
+  <div class="analysis-header">Analysis</div>
+  <div class="analysis-grid">
+    <div class="analysis-item">
+      <div class="analysis-num">01</div>
+      <h3>스트리밍은 &lsquo;포털&rsquo;이 되거나, &lsquo;번들의 부품&rsquo;이 되거나</h3>
+      <p>D&rsquo;Amaro의 첫 메시지가 흥미로운 건, Disney+를 &lsquo;스트리밍 서비스&rsquo;가 아니라 &lsquo;디지털 포털&rsquo;이라고 재정의했다는 점이다. 영화·파크·게임·머천다이즈를 하나의 구독 관계로 엮겠다는 구상은, 지난주 Paramount-WBD 합병과 Amazon Prime Video Ultra의 번들 전략과 정확히 반대 방향이다. 하나는 콘텐츠를 더 크게 묶어 규모로 승부하고, 다른 하나는 콘텐츠를 다른 경험과 교차시켜 깊이로 승부한다. Disney가 이 전략을 실행할 수 있는 건, 스트리밍 외에 연결할 자산 &mdash; 파크, 크루즈, ESPN, 게임 &mdash; 이 있기 때문이다. 스트리밍만 가진 회사는 번들 말고는 갈 곳이 없다.</p>
+    </div>
+    <div class="analysis-item">
+      <div class="analysis-num">02</div>
+      <h3>정부가 딜의 당사자가 될 때</h3>
+      <p>TikTok 매각에서 미 정부가 거래가의 70%를 &lsquo;수수료&rsquo;로 가져가고, Live Nation 반독점 소송에서 DOJ가 기업 분리 대신 합의금으로 물러나는 동안 36개 주가 재판을 이어간다. 두 사건의 공통점은 정부가 중재자가 아니라 딜의 당사자로 행동하고 있다는 것이다. 엔터테인먼트 산업은 이제 M&A 수수료뿐 아니라 &lsquo;정부 수수료&rsquo;까지 비용으로 계산해야 한다. 문제는 이 비용의 예측 가능성이 제로라는 점이다. 규제가 아닌 &lsquo;거래&rsquo;로 작동하는 정부는, 다음 딜에 다른 가격표를 들이밀 수 있다.</p>
+    </div>
+    <div class="analysis-item">
+      <div class="analysis-num">03</div>
+      <h3>아시아 IP의 수직 통합이 시작됐다</h3>
+      <p>Aniplex-Kadokawa의 Animec은 제작-배급을 수직 통합하고, 사우디 EGDC의 Capcom 투자는 IP-자본을 수직 통합한다. Netflix의 C-드라마 동시방영은 중국 IP-글로벌 유통을 수직 통합한다. 이 세 움직임을 관통하는 논리는 같다: 아시아 IP의 가치가 입증된 이상, 그 가치 사슬의 중간 마진을 직접 가져가겠다는 것이다. TOHO에 빼앗기던 극장 배급 마진, 현지 유통사에 넘기던 해외 라이선싱 수익, 포트폴리오 투자로 끝나던 게임 IP 수익률 &mdash; 모두 &lsquo;직접 통제&rsquo;로 방향을 틀었다. Demon Slayer가 $8억을 찍고 Animec이 탄생한 건 우연이 아니다.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- NAV BOTTOM -->
+<nav class="nav-bottom">
+  <a href="SPECIAL_0316.html">&larr; 이전 호</a>
+  <span class="nav-center"><a href="index.html">목록</a></span>
+  <span class="nav-disabled">다음 호 &rarr;</span>
+</nav>
+
+<footer class="footer">
+  <div>
+    <div class="footer-brand">엔터문화연구소 주간 브리핑</div>
+    <div class="footer-legal">
+      본 뉴스레터는 AI 기반 큐레이션으로 제작되었으며, 인용된 모든 기사의 저작권은 원 매체에 귀속됩니다.<br>
+      모든 금액은 2026년 3월 20일 기준 환율($1 = &#8361;1,490)을 적용했습니다. 실제 환율과 차이가 있을 수 있습니다.
+    </div>
+  </div>
+  <div style="text-align:right;">
+    <div class="footer-fx">$1 = &#8361;1,490</div>
+    <div class="footer-tags">Disney &middot; Live Nation &middot; TikTok &middot; Animec &middot; Capcom &middot; SAG-AFTRA</div>
+  </div>
+</footer>
+
+</body>
+</html>
