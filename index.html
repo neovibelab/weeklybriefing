@@ -12,11 +12,16 @@
   --lime: #C8FF00;
   --black: #0a0a0a;
   --white: #ffffff;
+  --gray-200: #e8e8e8;
   --gray-300: #d0d0d0;
   --gray-400: #999999;
   --gray-500: #666666;
   --gray-600: #444444;
   --purple: #7B61FF;
+  --us: #0055FF;
+  --cn: #FF2D20;
+  --jp: #7C3AED;
+  --global: #E67700;
 }
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: var(--black); color: var(--white); font-family: 'Noto Sans KR', sans-serif; font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
@@ -24,6 +29,23 @@ body { background: var(--black); color: var(--white); font-family: 'Noto Sans KR
 .masthead-title { font-family: 'Syne', sans-serif; font-size: clamp(36px, 5vw, 56px); font-weight: 800; line-height: 0.95; letter-spacing: -2px; margin-bottom: 12px; }
 .masthead-sub { font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; }
 .content { max-width: 800px; margin: 0 auto; padding: 48px 48px 80px; }
+
+/* Tag filter bar */
+.tag-bar { padding: 0 0 28px; border-bottom: 1px solid var(--gray-600); margin-bottom: 32px; }
+.tag-bar-label { display: block; font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gray-500); margin-bottom: 12px; }
+.tag-btn {
+  font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
+  background: transparent; color: var(--gray-400);
+  border: 1px solid var(--gray-600);
+  padding: 6px 14px; border-radius: 2px;
+  cursor: pointer; margin: 0 6px 8px 0;
+  transition: all 0.2s;
+}
+.tag-btn:hover { border-color: var(--lime); color: var(--lime); }
+.tag-btn.active { background: var(--lime); color: var(--black); border-color: var(--lime); }
+
+/* Issue list */
 .issue-list { list-style: none; }
 .issue-item { border-bottom: 1px solid var(--gray-600); }
 .issue-link { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; text-decoration: none; color: var(--white); transition: color 0.2s; }
@@ -32,13 +54,53 @@ body { background: var(--black); color: var(--white); font-family: 'Noto Sans KR
 .issue-date { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--gray-400); white-space: nowrap; margin-left: 24px; }
 .issue-link:hover .issue-date { color: var(--lime); }
 .issue-badge { display: inline-block; font-family: 'Space Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--purple); color: var(--white); padding: 2px 6px; border-radius: 2px; margin-right: 8px; vertical-align: middle; }
+
+/* Filtered view */
+.filtered-view { display: none; }
+.filtered-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--gray-600); }
+.filtered-tag-name { font-family: 'Space Mono', monospace; font-size: 16px; font-weight: 700; color: var(--lime); letter-spacing: 1px; }
+.filtered-count { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--gray-400); }
+.filtered-clear { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--gray-500); background: none; border: 1px solid var(--gray-600); padding: 4px 10px; border-radius: 2px; cursor: pointer; margin-left: auto; transition: all 0.2s; }
+.filtered-clear:hover { border-color: var(--white); color: var(--white); }
+
+.filtered-article { border-bottom: 1px solid var(--gray-600); padding: 20px 0; }
+.filtered-article:last-child { border-bottom: none; }
+.filtered-article-link { text-decoration: none; color: var(--white); display: block; transition: color 0.2s; }
+.filtered-article-link:hover { color: var(--lime); }
+.filtered-article-link:hover .filtered-article-meta { color: var(--lime); }
+.filtered-article-tags { margin-bottom: 8px; }
+.filtered-region { display: inline-block; font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; margin-right: 6px; }
+.filtered-region-us { background: var(--us); color: #fff; }
+.filtered-region-cn { background: var(--cn); color: #fff; }
+.filtered-region-jp { background: var(--jp); color: #fff; }
+.filtered-region-global { background: var(--global); color: #fff; }
+.filtered-cat { font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--gray-400); }
+.filtered-article-title { font-size: 15px; font-weight: 500; line-height: 1.5; margin-bottom: 6px; }
+.filtered-article-meta { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--gray-500); transition: color 0.2s; }
+
+/* Loading */
+.loading { text-align: center; padding: 48px 0; }
+.loading-text { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--gray-500); letter-spacing: 1px; }
+.loading-bar { width: 120px; height: 2px; background: var(--gray-600); margin: 16px auto 0; border-radius: 1px; overflow: hidden; }
+.loading-bar::after { content: ''; display: block; width: 40%; height: 100%; background: var(--lime); animation: loading 1s ease-in-out infinite; }
+@keyframes loading { 0% { transform: translateX(-100%); } 100% { transform: translateX(350%); } }
+
+/* Tag legend */
+.tag-legend { margin-top: 8px; }
+.tag-legend-item { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--gray-500); letter-spacing: 0.5px; display: inline; }
+.tag-legend-item + .tag-legend-item::before { content: ' · '; }
+
 .footer { background: var(--lime); color: var(--black); padding: 24px 48px; text-align: center; }
 .footer-brand { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; margin-bottom: 4px; }
 .footer-tagline { font-family: 'Space Mono', monospace; font-size: 10px; opacity: 0.5; }
+
 @media (max-width: 600px) {
   .masthead { padding: 32px 20px 28px; }
   .content { padding: 32px 20px 60px; }
   .footer { padding: 20px; }
+  .tag-btn { padding: 5px 10px; font-size: 10px; margin: 0 4px 6px 0; }
+  .filtered-header { flex-wrap: wrap; gap: 8px; }
+  .filtered-clear { margin-left: 0; }
 }
 </style>
 </head>
@@ -50,50 +112,287 @@ body { background: var(--black); color: var(--white); font-family: 'Noto Sans KR
 </header>
 
 <div class="content">
-  <ul class="issue-list">
-    <li class="issue-item">
-      <a class="issue-link" href="NEWSPAPER_0411.html">
-        <span class="issue-title">Vol. 05 — WBD-Paramount 주주투표, Disney 감원, WGA 계약, 중국 AI 규제</span>
-        <span class="issue-date">2026.04.11</span>
-      </a>
-    </li>
-    <li class="issue-item">
-      <a class="issue-link" href="NEWSPAPER_0404.html">
-        <span class="issue-title">Vol. 04 — Netflix InterPositive 인수, EA 민영화 완료 임박, Sony·TCL BRAVIA JV</span>
-        <span class="issue-date">2026.04.04</span>
-      </a>
-    </li>
-    <li class="issue-item">
-      <a class="issue-link" href="NEWSPAPER_0328.html">
-        <span class="issue-title">Vol. 03 — OpenAI Sora 셧다운, Paramount-WBD 표결, AI 숏드라마 혁명</span>
-        <span class="issue-date">2026.03.28</span>
-      </a>
-    </li>
-    <li class="issue-item">
-      <a class="issue-link" href="NEWSPAPER_0321.html">
-        <span class="issue-title">Vol. 02 — Disney CEO 교체, Live Nation 반독점, TikTok 수수료</span>
-        <span class="issue-date">2026.03.21</span>
-      </a>
-    </li>
-    <li class="issue-item">
-      <a class="issue-link" href="SPECIAL_0316.html">
-        <span class="issue-title"><span class="issue-badge">Special</span>BTS 광화문 D-5 — 앨범, Netflix, 도시 운영</span>
-        <span class="issue-date">2026.03.16</span>
-      </a>
-    </li>
-    <li class="issue-item">
-      <a class="issue-link" href="NEWSPAPER_0314.html">
-        <span class="issue-title">Vol. 01 — Paramount-WBD 합병, 숏드라마, WGA 협상</span>
-        <span class="issue-date">2026.03.14</span>
-      </a>
-    </li>
-  </ul>
+
+  <!-- Tag filter bar -->
+  <div class="tag-bar">
+    <span class="tag-bar-label">Filter by tag</span>
+    <button class="tag-btn active" data-tag="ALL">ALL</button>
+    <button class="tag-btn" data-tag="M&A">M&A</button>
+    <button class="tag-btn" data-tag="AI">AI</button>
+    <button class="tag-btn" data-tag="IP">IP</button>
+    <button class="tag-btn" data-tag="INV">INV</button>
+    <button class="tag-btn" data-tag="REG">REG</button>
+    <button class="tag-btn" data-tag="DATA">DATA</button>
+    <button class="tag-btn" data-tag="HR">HR</button>
+    <button class="tag-btn" data-tag="GZ">GZ</button>
+    <button class="tag-btn" data-tag="OUT">OUT</button>
+    <div class="tag-legend">
+      <span class="tag-legend-item">M&A 인수합병</span>
+      <span class="tag-legend-item">AI 인공지능</span>
+      <span class="tag-legend-item">IP 지식재산</span>
+      <span class="tag-legend-item">INV 투자</span>
+      <span class="tag-legend-item">REG 규제</span>
+      <span class="tag-legend-item">DATA 시장데이터</span>
+      <span class="tag-legend-item">HR 인사</span>
+      <span class="tag-legend-item">GZ Z세대</span>
+      <span class="tag-legend-item">OUT 전망</span>
+    </div>
+  </div>
+
+  <!-- Issue list (default view) -->
+  <div id="issue-view">
+    <ul class="issue-list">
+      <li class="issue-item">
+        <a class="issue-link" href="NEWSPAPER_0411.html">
+          <span class="issue-title">Vol. 05 — WBD-Paramount 주주투표, Disney 감원, WGA 계약, 중국 AI 규제</span>
+          <span class="issue-date">2026.04.11</span>
+        </a>
+      </li>
+      <li class="issue-item">
+        <a class="issue-link" href="NEWSPAPER_0404.html">
+          <span class="issue-title">Vol. 04 — Netflix InterPositive 인수, EA 민영화 완료 임박, Sony·TCL BRAVIA JV</span>
+          <span class="issue-date">2026.04.04</span>
+        </a>
+      </li>
+      <li class="issue-item">
+        <a class="issue-link" href="NEWSPAPER_0328.html">
+          <span class="issue-title">Vol. 03 — OpenAI Sora 셧다운, Paramount-WBD 표결, AI 숏드라마 혁명</span>
+          <span class="issue-date">2026.03.28</span>
+        </a>
+      </li>
+      <li class="issue-item">
+        <a class="issue-link" href="NEWSPAPER_0321.html">
+          <span class="issue-title">Vol. 02 — Disney CEO 교체, Live Nation 반독점, TikTok 수수료</span>
+          <span class="issue-date">2026.03.21</span>
+        </a>
+      </li>
+      <li class="issue-item">
+        <a class="issue-link" href="SPECIAL_0316.html">
+          <span class="issue-title"><span class="issue-badge">Special</span>BTS 광화문 D-5 — 앨범, Netflix, 도시 운영</span>
+          <span class="issue-date">2026.03.16</span>
+        </a>
+      </li>
+      <li class="issue-item">
+        <a class="issue-link" href="NEWSPAPER_0314.html">
+          <span class="issue-title">Vol. 01 — Paramount-WBD 합병, 숏드라마, WGA 협상</span>
+          <span class="issue-date">2026.03.14</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Filtered view (shown when tag is selected) -->
+  <div id="filtered-view" class="filtered-view">
+    <div class="filtered-header">
+      <span id="filtered-tag-name" class="filtered-tag-name"></span>
+      <span id="filtered-count" class="filtered-count"></span>
+      <button class="filtered-clear" onclick="clearFilter()">× Clear filter</button>
+    </div>
+    <div id="filtered-articles"></div>
+  </div>
+
 </div>
 
 <footer class="footer">
   <div class="footer-brand">엔터문화연구소 × Claude</div>
   <div class="footer-tagline">AI-curated global entertainment intelligence</div>
 </footer>
+
+<script>
+(function() {
+  // Article data cache
+  let articleCache = null;
+  let isLoading = false;
+
+  // Tag full names for display
+  const TAG_NAMES = {
+    'M&A': 'M&A — 인수합병',
+    'AI': 'AI — 인공지능',
+    'IP': 'IP — 지식재산',
+    'INV': 'Investment — 투자',
+    'REG': 'Regulation — 규제',
+    'DATA': 'Market Data — 시장데이터',
+    'HR': 'Personnel — 인사',
+    'GZ': 'Gen Z — Z세대',
+    'OUT': 'Outlook — 전망'
+  };
+
+  // Region CSS class map
+  const REGION_CLASS = {
+    'US': 'filtered-region-us',
+    'CN': 'filtered-region-cn',
+    'JP': 'filtered-region-jp',
+    'Global': 'filtered-region-global'
+  };
+
+  // Get issue URLs from the page (only NEWSPAPER_, skip SPECIAL_)
+  function getIssueURLs() {
+    const links = document.querySelectorAll('.issue-link');
+    const issues = [];
+    links.forEach(link => {
+      const url = link.getAttribute('href');
+      if (!url.startsWith('NEWSPAPER_')) return;
+      const titleEl = link.querySelector('.issue-title');
+      const dateEl = link.querySelector('.issue-date');
+      const titleText = titleEl ? titleEl.textContent.trim() : '';
+      const volMatch = titleText.match(/Vol\.\s*\d+/);
+      issues.push({
+        url: url,
+        label: volMatch ? volMatch[0] : titleText.split('—')[0].trim(),
+        date: dateEl ? dateEl.textContent.trim() : ''
+      });
+    });
+    return issues;
+  }
+
+  // Fetch and parse all articles from all issues
+  async function fetchAllArticles() {
+    if (articleCache) return articleCache;
+
+    const issues = getIssueURLs();
+    const allArticles = [];
+
+    await Promise.all(issues.map(async (issue) => {
+      try {
+        const resp = await fetch(issue.url);
+        const html = await resp.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+
+        const articleEls = doc.querySelectorAll('article.hero-main, article.sidebar-card, article.col-article');
+        articleEls.forEach(el => {
+          const tagEl = el.querySelector('.tag');
+          const catEl = el.querySelector('.tag-cat');
+          const titleEl = el.querySelector('.article-title');
+
+          if (!tagEl || !catEl || !titleEl) return;
+
+          const region = tagEl.textContent.trim();
+          const catText = catEl.textContent.trim();
+          const tags = catText.split('·').map(t => t.replace(/&/g, '&').trim()).filter(Boolean);
+          const title = titleEl.textContent.trim();
+
+          allArticles.push({
+            region: region,
+            tags: tags,
+            catText: catText,
+            title: title,
+            issue: issue.label,
+            issueDate: issue.date,
+            url: issue.url
+          });
+        });
+      } catch (e) {
+        console.error('Failed to fetch', issue.url, e);
+      }
+    }));
+
+    // Sort by date descending
+    allArticles.sort((a, b) => b.issueDate.localeCompare(a.issueDate));
+    articleCache = allArticles;
+    return allArticles;
+  }
+
+  // Render filtered articles
+  function renderFiltered(tag, articles) {
+    const filtered = articles.filter(a => a.tags.includes(tag));
+    const container = document.getElementById('filtered-articles');
+    const tagName = document.getElementById('filtered-tag-name');
+    const count = document.getElementById('filtered-count');
+
+    tagName.textContent = TAG_NAMES[tag] || tag;
+    count.textContent = filtered.length + ' articles';
+
+    if (filtered.length === 0) {
+      container.innerHTML = '<div style="padding:32px 0;text-align:center;font-family:\'Space Mono\',monospace;font-size:12px;color:var(--gray-500);">No articles found.</div>';
+    } else {
+      container.innerHTML = filtered.map(a => {
+        const regionClass = REGION_CLASS[a.region] || 'filtered-region-global';
+        return `
+          <div class="filtered-article">
+            <a class="filtered-article-link" href="${a.url}">
+              <div class="filtered-article-tags">
+                <span class="filtered-region ${regionClass}">${a.region}</span>
+                <span class="filtered-cat">${a.catText}</span>
+              </div>
+              <div class="filtered-article-title">${a.title}</div>
+              <div class="filtered-article-meta">${a.issue} &middot; ${a.issueDate}</div>
+            </a>
+          </div>`;
+      }).join('');
+    }
+
+    document.getElementById('issue-view').style.display = 'none';
+    document.getElementById('filtered-view').style.display = 'block';
+  }
+
+  // Show loading state
+  function showLoading() {
+    document.getElementById('issue-view').style.display = 'none';
+    document.getElementById('filtered-view').style.display = 'block';
+    document.getElementById('filtered-articles').innerHTML = '<div class="loading"><div class="loading-text">Loading articles...</div><div class="loading-bar"></div></div>';
+    document.getElementById('filtered-tag-name').textContent = '';
+    document.getElementById('filtered-count').textContent = '';
+  }
+
+  // Handle tag button click
+  async function handleTagClick(tag) {
+    // Update active state
+    document.querySelectorAll('.tag-btn').forEach(btn => btn.classList.remove('active'));
+
+    if (tag === 'ALL') {
+      // Show issue list
+      document.getElementById('issue-view').style.display = 'block';
+      document.getElementById('filtered-view').style.display = 'none';
+      document.querySelector('[data-tag="ALL"]').classList.add('active');
+      // Update URL
+      history.pushState(null, '', window.location.pathname);
+      return;
+    }
+
+    // Activate clicked button
+    const activeBtn = document.querySelector(`[data-tag="${tag}"]`);
+    if (activeBtn) activeBtn.classList.add('active');
+
+    // Update URL
+    history.pushState(null, '', '?tag=' + encodeURIComponent(tag));
+
+    showLoading();
+
+    const articles = await fetchAllArticles();
+    renderFiltered(tag, articles);
+  }
+
+  // Clear filter
+  window.clearFilter = function() {
+    handleTagClick('ALL');
+  };
+
+  // Initialize tag buttons
+  document.querySelectorAll('.tag-btn').forEach(btn => {
+    btn.addEventListener('click', () => handleTagClick(btn.dataset.tag));
+  });
+
+  // Handle URL parameter on load
+  const params = new URLSearchParams(window.location.search);
+  const tagParam = params.get('tag');
+  if (tagParam) {
+    handleTagClick(tagParam);
+  }
+
+  // Handle browser back/forward
+  window.addEventListener('popstate', () => {
+    const p = new URLSearchParams(window.location.search);
+    const t = p.get('tag');
+    if (t) {
+      handleTagClick(t);
+    } else {
+      handleTagClick('ALL');
+    }
+  });
+
+})();
+</script>
 
 </body>
 </html>

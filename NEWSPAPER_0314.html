@@ -99,6 +99,8 @@ body {
   color: var(--gray-400);
   margin-left: 8px;
 }
+.tag-cat a { color: inherit; text-decoration: none; cursor: pointer; border-bottom: 1px dotted var(--gray-600); transition: all 0.15s; }
+.tag-cat a:hover { color: var(--lime); border-color: var(--lime); }
 
 .hero {
   display: grid;
@@ -583,5 +585,13 @@ body {
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.tag-cat').forEach(function(el){
+  var tags=el.textContent.split('\u00B7').map(function(t){return t.trim();}).filter(Boolean);
+  el.innerHTML=tags.map(function(t){
+    return '<a href="index.html?tag='+encodeURIComponent(t)+'">'+t+'</a>';
+  }).join(' \u00B7 ');
+});
+</script>
 </body>
 </html>

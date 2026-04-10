@@ -43,6 +43,8 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
 .tag-jp { background: var(--jp); color: #fff; }
 .tag-global { background: var(--global); color: #fff; }
 .tag-cat { font-family: var(--font-mono); font-size: 10px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; color: var(--gray-400); margin-left: 8px; }
+.tag-cat a { color: inherit; text-decoration: none; cursor: pointer; border-bottom: 1px dotted var(--gray-600); transition: all 0.15s; }
+.tag-cat a:hover { color: var(--lime); border-color: var(--lime); }
 
 .hero { display: grid; grid-template-columns: 1.5fr 1fr; gap: 0; border-bottom: 1px solid var(--gray-600); padding: 48px 0; }
 .hero-main { padding-right: 48px; border-right: 1px solid var(--gray-600); }
@@ -309,5 +311,13 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('.tag-cat').forEach(function(el){
+  var tags=el.textContent.split('\u00B7').map(function(t){return t.trim();}).filter(Boolean);
+  el.innerHTML=tags.map(function(t){
+    return '<a href="index.html?tag='+encodeURIComponent(t)+'">'+t+'</a>';
+  }).join(' \u00B7 ');
+});
+</script>
 </body>
 </html>
