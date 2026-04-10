@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>엔터문화연구소 — 글로벌 주간 브리핑 2026.04.11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Sans+KR:wght@300;400;500;600;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --lime: #C8FF00;
+  --lime-dim: #a8d600;
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --gray-200: #e8e8e8;
+  --gray-300: #d0d0d0;
+  --gray-400: #999999;
+  --gray-500: #666666;
+  --gray-600: #444444;
+  --us: #0055FF;
+  --cn: #FF2D20;
+  --jp: #7C3AED;
+  --global: #E67700;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-heading: 'Syne', 'Noto Sans KR', sans-serif;
+  --font-body: 'Noto Sans KR', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--black); color: var(--white); font-family: var(--font-body); font-size: 15px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+.masthead { background: var(--lime); color: var(--black); padding: 40px 48px 36px; }
+.masthead-date { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.5px; opacity: 0.6; margin-bottom: 24px; }
+.masthead-title { font-family: var(--font-heading); font-size: clamp(42px, 6vw, 72px); font-weight: 800; line-height: 0.95; letter-spacing: -2px; margin-bottom: 20px; }
+.masthead-sub { font-family: var(--font-mono); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; }
+
+.content { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+
+.tag { display: inline-block; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 2px; margin-bottom: 12px; }
+.tag-us { background: var(--us); color: #fff; }
+.tag-cn { background: var(--cn); color: #fff; }
+.tag-jp { background: var(--jp); color: #fff; }
+.tag-global { background: var(--global); color: #fff; }
+.tag-cat { font-family: var(--font-mono); font-size: 10px; font-weight: 400; letter-spacing: 1px; text-transform: uppercase; color: var(--gray-400); margin-left: 8px; }
+
+.hero { display: grid; grid-template-columns: 1.5fr 1fr; gap: 0; border-bottom: 1px solid var(--gray-600); padding: 48px 0; }
+.hero-main { padding-right: 48px; border-right: 1px solid var(--gray-600); }
+.hero-main .article-title { font-family: var(--font-display); font-size: clamp(28px, 3vw, 40px); font-weight: 400; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 20px; color: var(--white); }
+.hero-main .article-lead { font-family: var(--font-display); font-size: 17px; font-style: italic; line-height: 1.55; color: var(--gray-300); margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--gray-600); }
+.article-body { font-size: 14px; line-height: 1.75; color: var(--gray-300); font-weight: 300; }
+.article-body p { margin-bottom: 12px; }
+
+.pull-quote { margin: 24px 0; padding: 20px 24px; background: var(--lime); color: var(--black); border-radius: 2px; }
+.pull-quote p { font-family: var(--font-heading); font-size: 16px; font-weight: 600; line-height: 1.45; margin-bottom: 0 !important; }
+.pull-quote cite { display: block; font-family: var(--font-mono); font-style: normal; font-size: 10px; margin-top: 10px; opacity: 0.5; letter-spacing: 0.5px; }
+
+.hero-sidebar { padding-left: 40px; display: flex; flex-direction: column; }
+.sidebar-card { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.sidebar-card:first-child { padding-bottom: 32px; margin-bottom: 32px; border-bottom: 1px solid var(--gray-600); }
+.sidebar-card .article-title { font-family: var(--font-display); font-size: 22px; font-weight: 400; line-height: 1.2; margin-bottom: 14px; color: var(--white); }
+.sidebar-card .article-body { font-size: 13px; }
+
+.amount { font-family: var(--font-mono); font-size: 0.88em; font-weight: 700; color: var(--lime); white-space: nowrap; }
+
+.source { display: block; margin-top: 14px; font-family: var(--font-mono); font-size: 10px; color: var(--gray-500); letter-spacing: 0.3px; }
+.source a { color: var(--gray-400); text-decoration: none; border-bottom: 1px solid var(--gray-600); transition: all 0.2s; }
+.source a:hover { color: var(--lime); border-color: var(--lime); }
+
+.col-section { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border-bottom: 1px solid var(--gray-600); }
+.col { padding: 40px 0; }
+.col:not(:last-child) { padding-right: 36px; margin-right: 36px; border-right: 1px solid var(--gray-600); }
+.col-header { font-family: var(--font-heading); font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gray-500); padding-bottom: 14px; margin-bottom: 28px; border-bottom: 1px solid var(--gray-600); }
+.col-article { margin-bottom: 32px; }
+.col-article:last-child { margin-bottom: 0; }
+.col-article .article-title { font-family: var(--font-display); font-size: 20px; font-weight: 400; line-height: 1.2; margin-bottom: 12px; color: var(--white); }
+.col-article .article-body { font-size: 13px; }
+
+.analysis { padding: 48px 0; }
+.analysis-header { font-family: var(--font-heading); font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--lime); padding-bottom: 14px; margin-bottom: 36px; border-bottom: 1px solid var(--gray-600); }
+.analysis-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; }
+.analysis-num { font-family: var(--font-display); font-size: 56px; font-style: italic; color: var(--gray-600); line-height: 1; margin-bottom: 12px; }
+.analysis-item h3 { font-family: var(--font-display); font-size: 22px; font-weight: 400; line-height: 1.25; margin-bottom: 14px; color: var(--white); }
+.analysis-item p { font-size: 13.5px; line-height: 1.7; color: var(--gray-300); font-weight: 300; }
+
+.footer { background: var(--lime); color: var(--black); padding: 32px 48px; display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; }
+.footer-brand { font-family: var(--font-heading); font-size: 14px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 2px; }
+.footer-legal { font-family: var(--font-mono); font-size: 10px; line-height: 1.8; opacity: 0.5; max-width: 560px; }
+.footer-tags { font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; opacity: 0.4; text-align: right; }
+.footer-fx { font-family: var(--font-mono); font-size: 13px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 6px; }
+
+.nav-top { display: flex; justify-content: space-between; align-items: center; padding: 12px 48px; background: var(--black); border-bottom: 1px solid var(--gray-600); }
+.nav-top a { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.5px; color: var(--gray-400); text-decoration: none; transition: color 0.2s; }
+.nav-top a:hover { color: var(--lime); }
+.nav-vol { font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); letter-spacing: 0.5px; }
+
+.nav-bottom { display: flex; justify-content: space-between; align-items: center; padding: 20px 48px; border-top: 1px solid var(--gray-600); background: var(--black); }
+.nav-bottom a { font-family: var(--font-mono); font-size: 12px; color: var(--gray-400); text-decoration: none; transition: color 0.2s; }
+.nav-bottom a:hover { color: var(--lime); }
+.nav-bottom .nav-disabled { font-family: var(--font-mono); font-size: 12px; color: var(--gray-600); pointer-events: none; }
+.nav-bottom .nav-center { font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); }
+.nav-bottom .nav-center a { color: var(--gray-400); }
+.nav-bottom .nav-center a:hover { color: var(--lime); }
+
+@media (max-width: 900px) {
+  .masthead { padding: 28px 20px 24px; }
+  .masthead-title { letter-spacing: -1px; }
+  .content { padding: 0 20px; }
+  .hero { grid-template-columns: 1fr; padding: 32px 0; }
+  .hero-main { padding-right: 0; border-right: none; padding-bottom: 32px; border-bottom: 1px solid var(--gray-600); }
+  .hero-sidebar { padding-left: 0; padding-top: 32px; }
+  .col-section { grid-template-columns: 1fr; }
+  .col:not(:last-child) { border-right: none; padding-right: 0; margin-right: 0; padding-bottom: 32px; margin-bottom: 0; border-bottom: 1px solid var(--gray-600); }
+  .analysis-grid { grid-template-columns: 1fr; gap: 36px; }
+  .footer { padding: 24px 20px; flex-direction: column; }
+  .footer-tags { text-align: left; }
+  .nav-top { padding: 12px 20px; }
+  .nav-bottom { padding: 16px 20px; }
+}
+@media print {
+  body { background: #fff; color: #000; }
+  .masthead, .footer { background: #f0f0f0; color: #000; }
+  .amount { color: #000; font-weight: 700; }
+  .pull-quote { background: #f0f0f0; color: #000; }
+  .article-title { color: #000 !important; }
+  a { color: #000 !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV TOP -->
+<nav class="nav-top">
+  <a href="index.html">&larr; Archive</a>
+  <span class="nav-vol">Vol. 05</span>
+</nav>
+
+<header class="masthead">
+  <div class="masthead-date">2026년 4월 11일 토요일 (4.7&ndash;4.11)</div>
+  <h1 class="masthead-title">엔터문화연구소<br>글로벌 주간 브리핑</h1>
+  <div class="masthead-sub">Weekly Business Briefing: US &middot; China &middot; Japan</div>
+</header>
+
+<div class="content">
+
+<!-- HERO -->
+<section class="hero">
+  <article class="hero-main">
+    <span class="tag tag-us">US</span><span class="tag-cat">M&amp;A &middot; Streaming</span>
+    <h2 class="article-title">WBD&ndash;Paramount Skydance, 4월 23일 주주투표 확정 &mdash; <span class="amount">$1,109억(₩164조)</span> 미디어 메가딜의 마지막 관문</h2>
+    <p class="article-lead">Warner Bros. Discovery가 Paramount Skydance의 <span class="amount">$1,109억(₩164조)</span> 인수 제안에 대한 주주 특별총회 일정을 4월 23일로 확정했다. WBD 주주는 주당 <span class="amount">$31(₩45,849)</span>의 현금을 수령하게 되며, 이는 영향 미반영 주가 대비 147% 프리미엄이다.</p>
+    <div class="article-body">
+      <p>이 딜의 배경은 복잡하다. Netflix가 지난해 말 WBD 인수를 위해 총기업가치 <span class="amount">$827억(₩122조)</span> 규모의 합의에 도달했으나, Paramount Skydance가 2월 <span class="amount">$1,109억(₩164조)</span>으로 역제안을 내며 상황이 뒤집혔다. WBD 이사회는 이를 &lsquo;우월한 제안(Superior Proposal)&rsquo;으로 판단, Netflix에 매칭 기회를 부여했지만 Netflix는 3월 초 철수를 선언하고 <span class="amount">$28억(₩4.1조)</span> 해약금을 수령했다.</p>
+      <p>이사회는 만장일치로 Paramount 거래에 찬성 권고를 내렸고, ISS와 Glass Lewis 등 의결권 자문사들도 찬성 의견을 제시한 것으로 알려졌다. 단, ISS는 CEO David Zaslav의 <span class="amount">$5.5억(₩8,135억)</span> 이상으로 추정되는 골든 패러슈트에 대해서는 반대 투표를 권고했다.</p>
+      <div class="pull-quote">
+        <p>거래가 9월 30일까지 완료되지 않으면 Paramount는 분기마다 주당 $0.25의 &lsquo;틱킹 피(ticking fee)&rsquo;를 WBD 주주에게 추가 지급해야 한다 &mdash; 분기당 약 <span class="amount">$6.5억(₩9,614억)</span>의 추가 비용.</p>
+        <cite>&mdash; WBD Proxy Statement (Mar 2026)</cite>
+      </div>
+      <p>거래 완료는 2026년 3분기로 예상된다. 미 법무부 반독점 심사가 남아 있지만, 합산 시에도 미국 미디어 시장 점유율이 스트리밍·케이블·극장 전체 기준 30%를 넘지 않아 승인 전망이 우세하다. 완료 시 Paramount Skydance는 HBO, Max, Warner Bros. Pictures, DC Studios, CNN, Discovery 채널군을 보유한 미디어 타이탄이 된다.</p>
+    </div>
+    <span class="source">출처: <a href="https://variety.com/2026/tv/news/warner-bros-discovery-shareholder-vote-paramount-merger-date-1236700451/" target="_blank">Variety</a> &middot; <a href="https://deadline.com/2026/03/warner-bros-discovery-sets-shareholder-vote-sale-paramount-1236766408/" target="_blank">Deadline</a> &middot; <a href="https://www.wbd.com/news/warner-bros-discovery-sets-shareholder-meeting-date-april-23-2026-approve-transaction" target="_blank">WBD IR</a> (Mar&ndash;Apr 2026)</span>
+  </article>
+
+  <div class="hero-sidebar">
+    <article class="sidebar-card">
+      <span class="tag tag-us">US</span><span class="tag-cat">Personnel &middot; Corporate</span>
+      <h2 class="article-title">Disney, 신임 CEO D&rsquo;Amaro 체제 첫 구조조정 &mdash; 마케팅 부문 중심 최대 1,000명 감원</h2>
+      <div class="article-body">
+        <p>4월 9일 보도에 따르면, Disney가 Josh D&rsquo;Amaro CEO 체제에서 첫 대규모 감원을 단행한다. &lsquo;Project Imagine&rsquo;으로 명명된 이번 구조조정은 최대 1,000명을 대상으로 하며, 마케팅 부문이 핵심이다. 올 1월 Asad Ayaz를 최고마케팅&middot;브랜드 책임자(CMBO)로 승진시키며 영화&middot;TV&middot;스트리밍 마케팅을 통합한 결과 발생한 중복 인력 정리다.</p>
+        <p>D&rsquo;Amaro는 3월 18일 주주총회에서 Iger로부터 공식 취임했다. Disney 전체 직원 23만 1,000명 중 극소수에 해당하지만, 신임 CEO의 효율화 의지를 보여주는 첫 신호다. 파크 부문 출신 CEO가 콘텐츠 마케팅 조직부터 손대고 있다는 점이 주목된다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.cnbc.com/2026/04/09/disney-layoffs-ceo-josh-damaro.html" target="_blank">CNBC</a> &middot; <a href="https://deadline.com/2026/04/disney-layoffs-new-ceo-1236785214/" target="_blank">Deadline</a> &middot; <a href="https://variety.com/2026/biz/news/disney-layoffs-1000-employees-josh-damaro-marketing-1236712071/" target="_blank">Variety</a> (Apr 9)</span>
+    </article>
+
+    <article class="sidebar-card">
+      <span class="tag tag-us">US</span><span class="tag-cat">Labor &middot; AI</span>
+      <h2 class="article-title">WGA, 4년 계약 타결 &mdash; 건강보험 <span class="amount">$3.21억(₩4,747억)</span> 투입, AI 훈련 통보 의무화</h2>
+      <div class="article-body">
+        <p>미국작가조합(WGA)과 AMPTP가 4월 초 4년짜리 새 계약에 합의했다. 핵심은 건강보험 기금에 <span class="amount">$3.21억(₩4,747억)</span>을 투입하는 것으로, 2017년 투입액 <span class="amount">$6,500만(₩961억)</span>의 약 5배다. 대신 조합원은 2027년부터 월 <span class="amount">$75(₩11만)</span>의 보험료를 부담한다.</p>
+        <p>최저 보수는 연 1.5%&ndash;3% 인상되며, 스트리밍 잔여보수(residual)의 &lsquo;성공 보너스&rsquo;가 기본 잔여보수의 50%에서 75%로 확대됐다. AI 조항은 스튜디오가 작가 저작물을 AI 훈련에 라이선스할 경우 조합에 통보할 의무를 명시했다. 비준 투표는 4월 16&ndash;24일 예정이다.</p>
+      </div>
+      <span class="source">출처: <a href="https://variety.com/2026/film/news/wga-deal-321-million-health-fund-residuals-ai-1236711731/" target="_blank">Variety</a> &middot; <a href="https://deadline.com/2026/04/wga-2026-contract-details-studios-1236784944/" target="_blank">Deadline</a> (Apr 2026)</span>
+    </article>
+  </div>
+</section>
+
+<!-- 3-COL -->
+<section class="col-section">
+
+  <div class="col">
+    <div class="col-header">China</div>
+    <article class="col-article">
+      <span class="tag tag-cn">CN</span><span class="tag-cat">Regulation &middot; AI</span>
+      <h3 class="article-title">중국 CAC, &lsquo;AI 디지털 휴먼&rsquo; 규제 초안 발표 &mdash; 초상권 무단 사용 금지, 미성년자 &lsquo;가상 연인&rsquo; 서비스 차단</h3>
+      <div class="article-body">
+        <p>4월 3일, 중국 국가인터넷정보판공실(CAC)이 &lsquo;디지털 가상인 정보서비스 관리 조치(초안)&rsquo;를 발표했다. AI로 생성된 인간형 가상 캐릭터를 상업적으로 활용하는 모든 서비스에 적용되며, 5월 6일까지 공개 의견 수렴을 진행한다.</p>
+        <p>핵심 조항은 세 가지다. 첫째, 실존 인물의 얼굴&middot;음성을 동의 없이 AI 캐릭터에 사용하는 것을 명시적으로 금지했다. 둘째, 18세 미만에 대한 &lsquo;가상 친밀 관계&rsquo; 서비스를 차단한다. 셋째, 모든 AI 디지털 휴먼 콘텐츠에 &lsquo;디지털 휴먼&rsquo; 라벨을 상시 표시해야 한다. 이는 최근 인기 배우 Xiao Zhan의 얼굴이 무단으로 AI 숏드라마에 사용된 사건 등이 직접적 계기가 됐다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.globaltimes.cn/page/202604/1358317.shtml" target="_blank">Global Times</a> &middot; <a href="https://chinaminutes.com/2026/04/05/china-targets-ai-virtual-humans-in-new-rules-to-protect-minors/" target="_blank">China Minutes</a> &middot; <a href="https://www.mayerbrown.com/en/insights/publications/2026/04/china-issues-draft-rules-on-interactive-ai-services" target="_blank">Mayer Brown</a> (Apr 3&ndash;5)</span>
+    </article>
+
+    <article class="col-article">
+      <span class="tag tag-cn">CN</span><span class="tag-cat">Market Data &middot; Content</span>
+      <h3 class="article-title">AI 숏드라마 폭발: 1월 일 470편 양산, 시청자 2.8억 전망 &mdash; 4월 1일 등록제 전격 시행</h3>
+      <div class="article-body">
+        <p>2026년 1월 기준 중국 내 AI 생성 숏드라마는 하루 평균 470편 이상 공개되고 있다. 연간 시청자 수는 2025년 1.2억에서 2026년 2.8억으로 두 배 이상 증가할 전망이다. AI가 시나리오, 영상 생성, 더빙까지 처리하면서 1편당 제작비가 인간 제작의 10분의 1 수준으로 떨어졌다.</p>
+        <p>4월 1일부터 AI 숏드라마가 공식적으로 국가 콘텐츠 등록 시스템에 편입됐다. 배포 전 등록과 분류 심사가 의무화됐으며, 4월 7일에는 &lsquo;주제 방향성 심사&rsquo;라는 새 심사 기준도 시행됐다. 4월 2일에는 배우협회가 AI 콘텐츠에서 출연자 초상&middot;음성의 무단 사용을 금지하는 성명을 발표했다.</p>
+      </div>
+      <span class="source">출처: <a href="https://hellochinatech.com/p/china-470-ai-dramas-a-day" target="_blank">HelloChinaTech</a> &middot; <a href="https://www.sixthtone.com/news/1018329" target="_blank">Sixth Tone</a> &middot; <a href="https://news.mydramalist.com/article/ai-dramas-and-movies-take-chinese-entertainment-by-storm" target="_blank">MyDramaList</a> (Mar&ndash;Apr 2026)</span>
+    </article>
+  </div>
+
+  <div class="col">
+    <div class="col-header">Japan</div>
+    <article class="col-article">
+      <span class="tag tag-jp">JP</span><span class="tag-cat">Tech &middot; AI</span>
+      <h3 class="article-title">Toei Animation, Preferred Networks와 AI 애니메이션 공동개발 &mdash; 원화&middot;채색&middot;배경 자동화 본격 투자</h3>
+      <div class="article-body">
+        <p>Toei Animation이 일본 AI 기업 Preferred Networks(PFN)에 투자하고 애니메이션 제작 AI 공동개발에 착수했다. 양사는 스토리보드 레이아웃 자동 생성, 색지정&middot;자동 색 보정, 원화 간 동화(in-between) 자동 생성, 사진 기반 배경 생성 등 4개 영역에서 AI 도구를 개발한다.</p>
+        <p>Toei는 현재 이들 AI를 실제 작품에 적용하지 않고 있지만, FY2026 전망에서 양사 시너지를 활용해 제작 효율과 품질을 동시에 높이겠다고 밝혔다. 배경 생성 분야에서는 이미 2021년 공동 출시한 &lsquo;Scenify&rsquo;가 운용 중이다. 일본 애니메이션 업계의 만성적 인력난 속에서, 주요 스튜디오가 AI를 제작 파이프라인에 본격 도입하는 흐름이 가속화되고 있다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.animationmagazine.net/2025/05/toei-invests-in-ai-tech-co-for-animation-production-venture/" target="_blank">Animation Magazine</a> &middot; <a href="https://animecorner.me/toei-animation-ai-anime-production/" target="_blank">Anime Corner</a> (2025&ndash;2026)</span>
+    </article>
+
+    <article class="col-article">
+      <span class="tag tag-jp">JP</span><span class="tag-cat">Market Data</span>
+      <h3 class="article-title">일본 애니메이션 산업 사상 최대 <span class="amount">$253억(₩3.74조)</span> &mdash; 해외 매출이 국내를 첫 역전</h3>
+      <div class="article-body">
+        <p>일본동화협회(AJA) 집계에 따르면, 2024년 일본 애니메이션 산업 총매출은 전년 대비 14.8% 증가한 <span class="amount">$253억(₩3.74조)</span>으로 사상 최고를 기록했다. 주목할 점은 해외 매출 <span class="amount">$140억(₩2.07조)</span>이 국내 매출 <span class="amount">$108억(₩1.60조)</span>을 처음으로 추월한 것이다.</p>
+        <p>Netflix, Crunchyroll(Sony), Disney+ 등 글로벌 스트리밍 플랫폼의 일본 애니메이션 직접 투자가 해외 매출 성장의 주 동력이다. 일본 정부가 2033년까지 콘텐츠 수출 목표를 <span class="amount">¥20조($1,333억/₩19.7조)</span>로 설정한 가운데, 애니메이션이 IP 수출의 선봉에 서 있다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.screendaily.com/news/japans-anime-industry-grows-to-record-25bn-boosted-by-overseas-market/5210433.article" target="_blank">Screen Daily</a> (2026)</span>
+    </article>
+  </div>
+
+  <div class="col">
+    <div class="col-header">Global</div>
+    <article class="col-article">
+      <span class="tag tag-global">Global</span><span class="tag-cat">Market Data</span>
+      <h3 class="article-title">2026 Q1 북미 박스오피스 <span class="amount">$17.7억(₩2.62조)</span>, 팬데믹 후 최강 분기 &mdash; &lt;Project Hail Mary&gt; 선두</h3>
+      <div class="article-body">
+        <p>2026년 1분기 북미 극장 매출이 <span class="amount">$17.7억(₩2.62조)</span>을 기록하며 팬데믹 이후 최고 분기 실적을 달성했다. 2023년 Q1보다 약 <span class="amount">$2,000만(₩296억)</span> 높고, 부진했던 2025년 Q1 대비 22% 증가다.</p>
+        <p>Amazon MGM의 &lt;Project Hail Mary&gt;가 11일 만에 <span class="amount">$1.77억(₩2,618억)</span>을 기록해 분기 최고 흥행작에 올랐고, Paramount의 &lt;Scream 7&gt;이 <span class="amount">$2억(₩2,958억)</span> 글로벌 돌파, Sony의 &lt;Goat&gt;이 북미 <span class="amount">$1.01억(₩1,493억)</span>을 기록했다. 4월에는 &lt;Super Mario Galaxy Movie&gt;가 글로벌 오프닝 <span class="amount">$3.73억(₩5,513억)</span>으로 2026년 최대 데뷔를 기록하며 2분기 호황을 예고한다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.axios.com/2026/04/07/2026-box-domestic-office-start" target="_blank">Axios</a> &middot; <a href="https://deadline.com/2026/04/box-office-super-mario-galaxy-movie-global-1236772345/" target="_blank">Deadline</a> (Apr 6&ndash;7)</span>
+    </article>
+  </div>
+
+</section>
+
+<!-- ANALYSIS -->
+<section class="analysis">
+  <div class="analysis-header">Analysis</div>
+  <div class="analysis-grid">
+    <div class="analysis-item">
+      <div class="analysis-num">01</div>
+      <h3>미디어 합종연횡의 종착점 &mdash; Paramount Skydance-WBD 합병이 재편하는 산업 지형</h3>
+      <p>Netflix의 WBD 인수 포기와 Paramount의 역전승은 단순한 인수전이 아니다. Netflix는 콘텐츠 라이브러리보다 오가닉 성장과 자본 효율을 택했고($28억 해약금까지 챙겼다), Paramount Skydance는 HBO·DC·CNN이라는 프리미엄 IP에 올인했다. 완료 시 탄생하는 신생 Paramount는 스트리밍(Max+Paramount+)·극장(Warner Bros.+Paramount Pictures)·스포츠(TNT·CBS)를 아우르는 수직 통합 미디어 그룹이 된다. 합산 시 미국 유료 스트리밍 구독자만 1.1억 이상으로 추산되며, 이는 Netflix 미국 구독자(약 8,600만)를 넘긴다. 규제 승인이 관건이지만, 미국 미디어 산업은 사실상 &lsquo;Netflix vs Paramount-WBD vs Disney&rsquo;의 3강 체제로 재편될 전망이다.</p>
+    </div>
+    <div class="analysis-item">
+      <div class="analysis-num">02</div>
+      <h3>AI 규제의 중국 모델 &mdash; 숏드라마 등록제와 디지털 휴먼 규제가 보여주는 방향</h3>
+      <p>중국은 4월 한 주 안에 AI 숏드라마 등록제 시행(4/1), 배우 초상권 보호 성명(4/2), 디지털 휴먼 규제 초안(4/3), 주제 방향성 심사 도입(4/7)을 연달아 내놓았다. 속도와 범위 면에서 미국이나 EU의 AI 규제 논의를 압도한다. 주목할 점은 &lsquo;산업은 허용하되 통제한다&rsquo;는 이중 전략이다. 하루 470편의 AI 드라마 양산을 막지 않으면서, 등록·라벨링·초상권을 통해 콘텐츠를 추적 가능한 체계 안에 넣는다. AI 엔터테인먼트 산업이 가장 빠르게 성장하는 시장에서 가장 먼저 규제 프레임을 세운 셈이다. 미국 할리우드가 WGA 계약의 AI &lsquo;통보 조항&rsquo; 수준에 머물고 있는 것과 대조적이다.</p>
+    </div>
+    <div class="analysis-item">
+      <div class="analysis-num">03</div>
+      <h3>극장의 역습 &mdash; 팬데믹 후 최강 분기가 증명하는 &lsquo;이벤트 시네마&rsquo; 모델</h3>
+      <p>2026년 Q1 북미 박스오피스 $17.7억은 팬데믹 후 최고일 뿐 아니라, 2023년 Q1(파업 전 마지막 정상 분기)을 소폭 넘긴 수치다. 4월 Super Mario Galaxy Movie의 $3.73억 글로벌 오프닝까지 더하면, 극장 산업은 완전한 회복을 넘어 성장 궤도에 진입했다. 공통점은 모두 &lsquo;이벤트형 IP 블록버스터&rsquo;라는 것이다. &lt;Project Hail Mary&gt;(SF 베스트셀러 원작), &lt;Scream 7&gt;(호러 프랜차이즈), &lt;Super Mario Galaxy&gt;(게임 IP) 모두 극장에서만 경험할 수 있는 집단적 체험을 판매한다. OTT 시대에 극장이 살아남는 공식은 명확하다: 집에서 볼 수 없는 것, 혼자 보면 의미가 줄어드는 것.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- NAV BOTTOM -->
+<nav class="nav-bottom">
+  <a href="NEWSPAPER_0404.html">&larr; 이전 호</a>
+  <span class="nav-center"><a href="index.html">목록</a></span>
+  <span class="nav-disabled">다음 호 &rarr;</span>
+</nav>
+
+<footer class="footer">
+  <div>
+    <div class="footer-brand">엔터문화연구소 주간 브리핑</div>
+    <div class="footer-legal">
+      본 뉴스레터는 AI 기반 큐레이션으로 제작되었으며, 인용된 모든 기사의 저작권은 원 매체에 귀속됩니다.<br>
+      모든 금액은 2026년 4월 10일 기준 환율($1 = ₩1,479)을 적용했습니다. 실제 환율과 차이가 있을 수 있습니다.
+    </div>
+  </div>
+  <div style="text-align:right;">
+    <div class="footer-fx">$1 = ₩1,479</div>
+    <div class="footer-tags">WBD &middot; Paramount &middot; Disney &middot; WGA &middot; CAC &middot; Toei &middot; Mario &middot; Box Office</div>
+  </div>
+</footer>
+
+</body>
+</html>
