@@ -84,6 +84,15 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
 .analysis-num { font-family: var(--font-display); font-size: 56px; font-style: italic; color: var(--gray-600); line-height: 1; margin-bottom: 12px; }
 .analysis-item h3 { font-family: var(--font-display); font-size: 22px; font-weight: 400; line-height: 1.25; margin-bottom: 14px; color: var(--white); }
 .analysis-item p { font-size: 13.5px; line-height: 1.7; color: var(--gray-300); font-weight: 300; }
+.analysis-tier { margin-bottom: 16px; padding-left: 16px; border-left: 2px solid var(--gray-600); }
+.analysis-tier:last-child { margin-bottom: 0; }
+.analysis-tier-signal { border-left-color: var(--gray-400); }
+.analysis-tier-pattern { border-left-color: var(--gray-500); }
+.analysis-tier-implication { border-left-color: var(--lime); background: rgba(200,255,0,0.02); padding: 12px 16px; border-radius: 0 4px 4px 0; }
+.analysis-label { display: block; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+.analysis-label-signal { color: var(--gray-400); }
+.analysis-label-pattern { color: var(--gray-500); }
+.analysis-label-implication { color: var(--lime); }
 
 .footer { background: var(--lime); color: var(--black); padding: 32px 48px; display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; }
 .footer-brand { font-family: var(--font-heading); font-size: 14px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 2px; }
@@ -267,23 +276,50 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
     <div class="analysis-item">
       <div class="analysis-num">01</div>
       <h3>걸프 자본의 할리우드 진입 &mdash; &lsquo;무의결권 메가투자&rsquo;가 여는 미디어 M&amp;A의 새 공식</h3>
-      <p><strong>Signal</strong> &mdash; 사우디 PIF·카타르·아부다비가 합산 $240억을 투입하면서 의결권과 이사회 참여를 전부 포기했다. 미국 미디어 산업 역사상 최대 규모의 순수 재무적 외국인 투자다.</p>
-      <p><strong>Pattern</strong> &mdash; 2016&ndash;2019년 중국 완다·텐센트의 할리우드 투자는 경영 참여와 기술 이전을 전제했고, 미중 갈등으로 전량 철수했다. 걸프 자본은 그 빈자리를 정반대 구조로 채운다: 의결권 포기로 CFIUS 심사를 우회하고, 미국 정치 리스크를 최소화한다. &lsquo;석유 이후(post-oil)&rsquo; 포트폴리오 다변화가 목적이며, 콘텐츠가 아닌 현금 흐름에 베팅하는 모델이다.</p>
-      <p><strong>Implication</strong> &mdash; CJ ENM이나 HYBE가 글로벌 M&amp;A나 대형 IP 인수를 추진할 때, 동일한 걸프 무의결권 자금 구조를 활용할 수 있는 선례가 만들어졌다. 특히 사우디 PIF는 이미 넥슨·카카오 등 한국 기업에 투자한 경험이 있어 접점이 존재한다. &lsquo;경영권 없는 대규모 자금&rsquo;이라는 새 옵션을 한국 콘텐츠 기업의 자금 조달 전략에 편입할 시점이다.</p>
+      <div class="analysis-tier analysis-tier-signal">
+        <div class="analysis-label analysis-label-signal">신호</div>
+        <p>사우디 PIF·카타르·아부다비가 합산 $240억을 투입하면서 의결권과 이사회 참여를 전부 포기했다. 미국 미디어 산업 역사상 최대 규모의 순수 재무적 외국인 투자다.</p>
+      </div>
+      <div class="analysis-tier analysis-tier-pattern">
+        <div class="analysis-label analysis-label-pattern">맥락</div>
+        <p>2016&ndash;2019년 중국 완다·텐센트의 할리우드 투자는 경영 참여와 기술 이전을 전제했고, 미중 갈등으로 전량 철수했다. 걸프 자본은 그 빈자리를 정반대 구조로 채운다: 의결권 포기로 CFIUS 심사를 우회하고, 미국 정치 리스크를 최소화한다. &lsquo;석유 이후(post-oil)&rsquo; 포트폴리오 다변화가 목적이며, 콘텐츠가 아닌 현금 흐름에 베팅하는 모델이다.</p>
+      </div>
+      <div class="analysis-tier analysis-tier-implication">
+        <div class="analysis-label analysis-label-implication">함의</div>
+        <p>CJ ENM이나 HYBE가 글로벌 M&amp;A나 대형 IP 인수를 추진할 때, 동일한 걸프 무의결권 자금 구조를 활용할 수 있는 선례가 만들어졌다. 특히 사우디 PIF는 이미 넥슨·카카오 등 한국 기업에 투자한 경험이 있어 접점이 존재한다. &lsquo;경영권 없는 대규모 자금&rsquo;이라는 새 옵션을 한국 콘텐츠 기업의 자금 조달 전략에 편입할 시점이다.</p>
+      </div>
     </div>
     <div class="analysis-item">
       <div class="analysis-num">02</div>
       <h3>AI 콘텐츠 산업의 3극 분화 &mdash; 미국은 보호, 중국은 양산+규제, 일본은 도구화</h3>
-      <p><strong>Signal</strong> &mdash; 같은 주에 미국 WGA는 &lsquo;훈련 데이터=재산권&rsquo;을 계약에 명시했고, 중국 CAC는 AI 디지털 휴먼 규제 초안을 내놓았으며, 일본 KADOKAWA는 AI와 정규직 애니메이터 육성에 동시 투자했다. 세 나라가 같은 기술에 전혀 다른 프레임을 씌운 한 주다.</p>
-      <p><strong>Pattern</strong> &mdash; 미국은 IP 보호, 중국은 시장 통제, 일본은 생산성 향상에 가치의 축을 뒀다. 중국은 하루 470편의 AI 드라마 양산을 허용하면서 등록제·라벨링·초상권으로 추적 체계를 구축하고, 미국은 창작자 재산권 확립에 집중하며, 일본은 만성적 인력난의 해법으로 AI를 제작 파이프라인에 편입시킨다. 세 접근 모두 AI를 거부하지 않지만, 규범의 방향이 다르다.</p>
-      <p><strong>Implication</strong> &mdash; 한국은 아직 엔터테인먼트 AI에 대한 산업적 프레임이 없다. 문제는 한국 콘텐츠 기업이 세 시장 모두에 수출한다는 점이다. 카카오엔터·스튜디오드래곤 등은 미국 시장용 콘텐츠에서는 WGA 식 AI 통보 의무를, 중국 유통에서는 등록제를, 일본 공동제작에서는 AI 도구 호환성을 각각 준수해야 한다. 시장별 AI 규범의 차이를 사전에 매핑하지 않으면 동시다발적 컴플라이언스 리스크에 노출된다.</p>
+      <div class="analysis-tier analysis-tier-signal">
+        <div class="analysis-label analysis-label-signal">신호</div>
+        <p>같은 주에 미국 WGA는 &lsquo;훈련 데이터=재산권&rsquo;을 계약에 명시했고, 중국 CAC는 AI 디지털 휴먼 규제 초안을 내놓았으며, 일본 KADOKAWA는 AI와 정규직 애니메이터 육성에 동시 투자했다. 세 나라가 같은 기술에 전혀 다른 프레임을 씌운 한 주다.</p>
+      </div>
+      <div class="analysis-tier analysis-tier-pattern">
+        <div class="analysis-label analysis-label-pattern">맥락</div>
+        <p>미국은 IP 보호, 중국은 시장 통제, 일본은 생산성 향상에 가치의 축을 뒀다. 중국은 하루 470편의 AI 드라마 양산을 허용하면서 등록제·라벨링·초상권으로 추적 체계를 구축하고, 미국은 창작자 재산권 확립에 집중하며, 일본은 만성적 인력난의 해법으로 AI를 제작 파이프라인에 편입시킨다. 세 접근 모두 AI를 거부하지 않지만, 규범의 방향이 다르다.</p>
+      </div>
+      <div class="analysis-tier analysis-tier-implication">
+        <div class="analysis-label analysis-label-implication">함의</div>
+        <p>한국은 아직 엔터테인먼트 AI에 대한 산업적 프레임이 없다. 문제는 한국 콘텐츠 기업이 세 시장 모두에 수출한다는 점이다. 카카오엔터·스튜디오드래곤 등은 미국 시장용 콘텐츠에서는 WGA 식 AI 통보 의무를, 중국 유통에서는 등록제를, 일본 공동제작에서는 AI 도구 호환성을 각각 준수해야 한다. 시장별 AI 규범의 차이를 사전에 매핑하지 않으면 동시다발적 컴플라이언스 리스크에 노출된다.</p>
+      </div>
     </div>
     <div class="analysis-item">
       <div class="analysis-num">03</div>
       <h3>Z세대의 역설 &mdash; &lsquo;구독 피로&rsquo;와 &lsquo;감정 경제&rsquo;가 재편하는 콘텐츠 비즈니스</h3>
-      <p><strong>Signal</strong> &mdash; 글로벌 Z세대의 37%가 구독 피로로 스트리밍을 해지했고, 80%가 한 작품만 보고 떠나는 &lsquo;시리얼 처닝&rsquo;을 실행한다. 동시에 중국 Z세대 90%는 &lsquo;감정적 가치&rsquo;에, 일본 Z세대는 &lsquo;커뮤니티 퍼스트&rsquo; 오프라인 체험에 지갑을 연다.</p>
-      <p><strong>Pattern</strong> &mdash; 모순처럼 보이지만, 3개 이상 구독을 유지하면서 80%가 처닝하는 행동의 공통 원리가 있다: 콘텐츠를 장기 관계가 아닌 &lsquo;감정 거래(emotional transaction)&rsquo;로 소비한다는 것이다. Super Mario Galaxy의 $3.72억 오프닝은 &lsquo;혼자 집에서 볼 수 없는 것&rsquo;의 가치를, 중국 AI 숏드라마의 폭발은 &lsquo;1분 안에 감정을 채우는 것&rsquo;의 가치를 증명한다. 형식이 아니라 감정 밀도가 과금의 기준이 되고 있다.</p>
-      <p><strong>Implication</strong> &mdash; 한국 OTT(웨이브·티빙)가 넷플릭스와 콘텐츠 양으로 경쟁하는 전략은 Z세대의 소비 문법과 맞지 않는다. 오히려 &lsquo;이 작품 하나 때문에 가입할 가치&rsquo;를 만드는 이벤트형 편성과, 커뮤니티·굿즈·오프라인으로 확장하는 감정 밀도 설계가 처닝 방어의 핵심이다. HYBE의 위버스 생태계, CJ의 KCON 모델이 이미 이 방향에 있으며, 이를 스트리밍 전략과 명시적으로 연결해야 할 시점이다.</p>
+      <div class="analysis-tier analysis-tier-signal">
+        <div class="analysis-label analysis-label-signal">신호</div>
+        <p>글로벌 Z세대의 37%가 구독 피로로 스트리밍을 해지했고, 80%가 한 작품만 보고 떠나는 &lsquo;시리얼 처닝&rsquo;을 실행한다. 동시에 중국 Z세대 90%는 &lsquo;감정적 가치&rsquo;에, 일본 Z세대는 &lsquo;커뮤니티 퍼스트&rsquo; 오프라인 체험에 지갑을 연다.</p>
+      </div>
+      <div class="analysis-tier analysis-tier-pattern">
+        <div class="analysis-label analysis-label-pattern">맥락</div>
+        <p>모순처럼 보이지만, 3개 이상 구독을 유지하면서 80%가 처닝하는 행동의 공통 원리가 있다: 콘텐츠를 장기 관계가 아닌 &lsquo;감정 거래(emotional transaction)&rsquo;로 소비한다는 것이다. Super Mario Galaxy의 $3.72억 오프닝은 &lsquo;혼자 집에서 볼 수 없는 것&rsquo;의 가치를, 중국 AI 숏드라마의 폭발은 &lsquo;1분 안에 감정을 채우는 것&rsquo;의 가치를 증명한다. 형식이 아니라 감정 밀도가 과금의 기준이 되고 있다.</p>
+      </div>
+      <div class="analysis-tier analysis-tier-implication">
+        <div class="analysis-label analysis-label-implication">함의</div>
+        <p>한국 OTT(웨이브·티빙)가 넷플릭스와 콘텐츠 양으로 경쟁하는 전략은 Z세대의 소비 문법과 맞지 않는다. 오히려 &lsquo;이 작품 하나 때문에 가입할 가치&rsquo;를 만드는 이벤트형 편성과, 커뮤니티·굿즈·오프라인으로 확장하는 감정 밀도 설계가 처닝 방어의 핵심이다. HYBE의 위버스 생태계, CJ의 KCON 모델이 이미 이 방향에 있으며, 이를 스트리밍 전략과 명시적으로 연결해야 할 시점이다.</p>
+      </div>
     </div>
   </div>
 </section>
