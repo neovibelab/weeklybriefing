@@ -79,7 +79,7 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
 .col-article .article-body { font-size: 13px; }
 
 .analysis { padding: 48px 0; }
-.analysis-header { font-family: var(--font-heading); font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--lime); padding-bottom: 14px; margin-bottom: 36px; border-bottom: 1px solid var(--gray-600); }
+.analysis-header { font-family: var(--font-heading); font-size: 13px; font-weight: 700; letter-spacing: 3px; color: var(--lime); padding-bottom: 14px; margin-bottom: 36px; border-bottom: 1px solid var(--gray-600); }
 .analysis-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; }
 .analysis-num { font-family: var(--font-display); font-size: 56px; font-style: italic; color: var(--gray-600); line-height: 1; margin-bottom: 12px; }
 .analysis-item h3 { font-family: var(--font-display); font-size: 22px; font-weight: 400; line-height: 1.25; margin-bottom: 14px; color: var(--white); }
@@ -90,8 +90,8 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
 .analysis-tier-pattern { border-left-color: var(--gray-500); }
 .analysis-tier-implication { border-left-color: var(--lime); background: rgba(200,255,0,0.02); padding: 12px 16px; border-radius: 0 4px 4px 0; }
 .analysis-label { display: block; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
-.analysis-label-signal { color: var(--gray-400); }
-.analysis-label-pattern { color: var(--gray-500); }
+.analysis-label-signal { color: var(--gray-300); }
+.analysis-label-pattern { color: var(--gray-300); }
 .analysis-label-implication { color: var(--lime); }
 
 .footer { background: var(--lime); color: var(--black); padding: 32px 48px; display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; flex-wrap: wrap; }
@@ -286,7 +286,7 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
 
 <!-- ANALYSIS -->
 <section class="analysis">
-  <div class="analysis-header">Analysis</div>
+  <div class="analysis-header">인사이트</div>
   <div class="analysis-grid">
     <div class="analysis-item">
       <div class="analysis-num">01</div>
@@ -300,7 +300,7 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
         <p>2016&ndash;2019년 중국 완다·텐센트의 할리우드 투자는 경영 참여와 기술 이전을 전제했고, 미중 갈등으로 전량 철수했다. 걸프 자본은 그 빈자리를 정반대 구조로 채운다: 의결권 포기로 CFIUS 심사를 우회하고, 미국 정치 리스크를 최소화한다. &lsquo;석유 이후(post-oil)&rsquo; 포트폴리오 다변화가 목적이며, 콘텐츠가 아닌 현금 흐름에 베팅하는 모델이다.</p>
       </div>
       <div class="analysis-tier analysis-tier-implication">
-        <div class="analysis-label analysis-label-implication">함의</div>
+        <div class="analysis-label analysis-label-implication">전략</div>
         <p>CJ ENM이나 HYBE가 글로벌 M&amp;A나 대형 IP 인수를 추진할 때, 동일한 걸프 무의결권 자금 구조를 활용할 수 있는 선례가 만들어졌다. 특히 사우디 PIF는 이미 넥슨·카카오 등 한국 기업에 투자한 경험이 있어 접점이 존재한다. &lsquo;경영권 없는 대규모 자금&rsquo;이라는 새 옵션을 한국 콘텐츠 기업의 자금 조달 전략에 편입할 시점이다.</p>
       </div>
     </div>
@@ -316,7 +316,7 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
         <p>미국은 IP 보호, 중국은 시장 통제, 일본은 생산성 향상에 가치의 축을 뒀다. 중국은 하루 470편의 AI 드라마 양산을 허용하면서 등록제·라벨링·초상권으로 추적 체계를 구축하고, 미국은 창작자 재산권 확립에 집중하며, 일본은 만성적 인력난의 해법으로 AI를 제작 파이프라인에 편입시킨다. 세 접근 모두 AI를 거부하지 않지만, 규범의 방향이 다르다.</p>
       </div>
       <div class="analysis-tier analysis-tier-implication">
-        <div class="analysis-label analysis-label-implication">함의</div>
+        <div class="analysis-label analysis-label-implication">전략</div>
         <p>한국은 아직 엔터테인먼트 AI에 대한 산업적 프레임이 없다. 문제는 한국 콘텐츠 기업이 세 시장 모두에 수출한다는 점이다. 카카오엔터·스튜디오드래곤 등은 미국 시장용 콘텐츠에서는 WGA 식 AI 통보 의무를, 중국 유통에서는 등록제를, 일본 공동제작에서는 AI 도구 호환성을 각각 준수해야 한다. 시장별 AI 규범의 차이를 사전에 매핑하지 않으면 동시다발적 컴플라이언스 리스크에 노출된다.</p>
       </div>
     </div>
@@ -332,7 +332,7 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
         <p>모순처럼 보이지만, 3개 이상 구독을 유지하면서 80%가 처닝하는 행동의 공통 원리가 있다: 콘텐츠를 장기 관계가 아닌 &lsquo;감정 거래(emotional transaction)&rsquo;로 소비한다는 것이다. Super Mario Galaxy의 $3.72억 오프닝은 &lsquo;혼자 집에서 볼 수 없는 것&rsquo;의 가치를, 중국 AI 숏드라마의 폭발은 &lsquo;1분 안에 감정을 채우는 것&rsquo;의 가치를 증명한다. 형식이 아니라 감정 밀도가 과금의 기준이 되고 있다.</p>
       </div>
       <div class="analysis-tier analysis-tier-implication">
-        <div class="analysis-label analysis-label-implication">함의</div>
+        <div class="analysis-label analysis-label-implication">전략</div>
         <p>한국 OTT(웨이브·티빙)가 넷플릭스와 콘텐츠 양으로 경쟁하는 전략은 Z세대의 소비 문법과 맞지 않는다. 오히려 &lsquo;이 작품 하나 때문에 가입할 가치&rsquo;를 만드는 이벤트형 편성과, 커뮤니티·굿즈·오프라인으로 확장하는 감정 밀도 설계가 처닝 방어의 핵심이다. HYBE의 위버스 생태계, CJ의 KCON 모델이 이미 이 방향에 있으며, 이를 스트리밍 전략과 명시적으로 연결해야 할 시점이다.</p>
       </div>
     </div>
