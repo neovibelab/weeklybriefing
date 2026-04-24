@@ -29,9 +29,22 @@
 - MMDD는 발행일 기준
 
 ### 제목 표기 규칙 (index.html issue-title 및 기타 헤드라인)
-- **`Vol. NN` 대신 `YYYY.MM.DD` 날짜 prefix 사용** (예: `2026.04.25 — WBD 주총 보상안 부결, …`)
+- **`Vol. NN` 대신 `YYYY.MM.DD` 날짜 prefix 사용** (예: `2026.04.25 — 애크먼, UMG에 94.9조 인수 제안`)
 - nav-top `nav-vol` 영역의 `Vol. NN` 표기는 아카이브 네비게이션 용도로 **유지**
 - 전체 호에 소급 적용(Vol.01~06 포함). 이후 주간 자동화는 본 규칙으로 생성
+
+#### issue-title 본문 규칙 (단일 핵심 주제)
+- **단일 핵심 주제 1개**로 압축한다. 쉼표로 여러 이슈를 이어 붙이지 않는다.
+- **날짜 제외 제목부 길이: 15~25자** (공백·구두점 포함). 시각 리듬 통일.
+- **선정 기준 (우선순위 순)**:
+  1. 그 주 Hero/메인으로 배치한 이슈 (정규호 기준 첫 번째 hero-main)
+  2. 주간을 관통하는 신호 — 여러 기사가 공명하는 거시 흐름
+  3. 애매하면 편집자(에이전트) 저널리즘 판단으로 선정
+- **스타일**: 기업명·인물명·핵심 숫자 중심. 수식어 최소화. 서술어 없이 명사구로 마무리 권장.
+  - 좋음: `Netflix, 애플렉 AI 스타트업 9,060억 인수` / `OpenAI, Sora 6개월 만에 셧다운`
+  - 피함: `OpenAI Sora 셧다운, Paramount-WBD 표결, AI 숏드라마 혁명` (3주제 병렬)
+- **Special 에디션**: 단일 이벤트를 더욱 짧게 (10~15자 권장). 예: `BTS 광화문 콘서트 D-5`
+- **`<title>` 태그 (각 호 HTML)**: 호별 핵심 주제는 넣지 않고 `엔터문화연구소 — 글로벌 주간 브리핑 YYYY.MM.DD` 형식으로 통일 유지 (SNS/검색 공유 일관성).
 
 ---
 
@@ -84,7 +97,7 @@
 
 차주 딥다이브 후보는 **대표 내부 열람용**이다. 발행 HTML(`NEWSPAPER_MMDD.html`)에 절대 포함하지 않는다. 매 호 작성 시 아래 규칙으로 별도 마크다운 파일을 산출한다.
 
-- **산출 위치**: `뉴타입컬처클럽_weeklybriefing/internal/`
+- **산출 위치**: `ntcc-weekly-briefing/internal/`
 - **파일명 규칙**: `YY.MM.DD-deepdive-candidates.md` (발행일 기준, 예: `26.04.25-deepdive-candidates.md`)
 - **.gitignore 관리 원칙**: 본 레포는 **공개 GitHub 레포**(neovibelab/weeklybriefing)다. `internal/` 경로 전체를 `.gitignore`에 등록해 외부 커밋을 차단한다. 신설·변경 금지(이미 등록돼 있음).
 - **발행 HTML 포함 금지**: TOC 앵커(`#next-deepdive`), 섹션 마크업(`<section class="next-dive">`), 관련 CSS(`.next-dive*`) 모두 HTML에 들어가지 않는다.
