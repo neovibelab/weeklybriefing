@@ -2,7 +2,7 @@ name: 주간 브리핑 자동 발행
 
 on:
   schedule:
-    - cron: '0 12 * * 5'  # 금요일 21:00 KST (12:00 UTC)
+    - cron: '0 11 * * 5'  # 금요일 20:00 KST (11:00 UTC)
   workflow_dispatch:       # GitHub UI에서 수동 실행 가능
 
 permissions:
