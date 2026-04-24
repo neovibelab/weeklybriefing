@@ -81,8 +81,20 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
 .col-article .article-title { font-family: var(--font-display); font-size: 20px; font-weight: 400; line-height: 1.2; margin-bottom: 12px; color: var(--white); }
 .col-article .article-body { font-size: 13px; }
 
-.analysis { padding: 48px 0; }
-.analysis-header { font-family: var(--font-heading); font-size: 18px; font-weight: 700; letter-spacing: 3px; color: var(--lime); padding-bottom: 14px; margin-bottom: 36px; border-bottom: 1px solid var(--gray-600); }
+.tldr { padding: 44px 0 40px; border-bottom: 1px solid var(--gray-600); }
+.tldr-label { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--lime); margin-bottom: 18px; }
+.tldr-header { font-family: var(--font-display); font-size: clamp(26px, 3vw, 34px); font-weight: 400; line-height: 1.2; color: var(--white); margin-bottom: 24px; letter-spacing: -0.5px; }
+.tldr-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
+.tldr-list li { font-family: var(--font-body); font-size: 15px; line-height: 1.6; color: var(--gray-200); font-weight: 400; padding-left: 18px; border-left: 2px solid var(--lime); }
+.tldr-list li .tldr-num { display: block; font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: var(--lime); letter-spacing: 2px; margin-bottom: 6px; }
+.tldr-toc { margin-top: 26px; padding-top: 18px; border-top: 1px dashed var(--gray-600); font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.5px; color: var(--gray-500); display: flex; flex-wrap: wrap; gap: 16px; }
+.tldr-toc a { color: var(--gray-300); text-decoration: none; border-bottom: 1px dotted var(--gray-600); padding-bottom: 1px; transition: all 0.2s; }
+.tldr-toc a:hover { color: var(--lime); border-color: var(--lime); }
+
+.analysis { padding: 56px 0 52px; border-bottom: 1px solid var(--gray-600); background: linear-gradient(180deg, rgba(200,255,0,0.035) 0%, rgba(200,255,0,0) 100%); margin: 0 -48px; padding-left: 48px; padding-right: 48px; }
+.analysis-intro { font-family: var(--font-display); font-size: 17px; font-style: italic; line-height: 1.55; color: var(--gray-300); margin-bottom: 30px; padding-bottom: 24px; border-bottom: 1px solid var(--gray-600); max-width: 820px; }
+.analysis-header { font-family: var(--font-heading); font-size: 22px; font-weight: 800; letter-spacing: 4px; color: var(--lime); padding-bottom: 16px; margin-bottom: 32px; border-bottom: 2px solid var(--lime); }
+.analysis-item { border-top: 1px solid var(--gray-600); padding-top: 20px; }
 .analysis-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; }
 .analysis-num { font-family: var(--font-display); font-size: 56px; font-style: italic; color: var(--gray-600); line-height: 1; margin-bottom: 12px; }
 .analysis-item h3 { font-family: var(--font-display); font-size: 22px; font-weight: 400; line-height: 1.25; margin-bottom: 14px; color: var(--white); }
@@ -126,6 +138,10 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
   .col-section { grid-template-columns: 1fr; }
   .col:not(:last-child) { border-right: none; padding-right: 0; margin-right: 0; padding-bottom: 32px; margin-bottom: 0; border-bottom: 1px solid var(--gray-600); }
   .analysis-grid { grid-template-columns: 1fr; gap: 36px; }
+  .tldr-list { grid-template-columns: 1fr; gap: 18px; }
+  .tldr-list li { font-size: 16px; }
+  .analysis { margin: 0 -20px; padding-left: 20px; padding-right: 20px; }
+  .analysis-intro { font-size: 16px; }
   body { font-size: 16px; line-height: 1.8; }
   .article-body { font-size: 16px; line-height: 1.85; }
   .sidebar-card .article-body { font-size: 15px; }
@@ -171,164 +187,204 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
 
 <div class="content">
 
-<!-- HERO -->
-<section class="hero">
-  <article class="hero-main">
-    <span class="tag tag-us">US</span><span class="tag-cat">M&amp;A &middot; INV</span>
-    <h2 class="article-title">WBD 주주, Paramount의 <span class="amount">$1,110억(₩165조)</span> 인수 압도적 가결 &mdash; 걸프 SWF <span class="amount">$240억(₩35.7조)</span>이 딜의 재무 기반</h2>
-    <p class="article-lead">4월 23일 Warner Bros. Discovery 주주 특별총회에서 Paramount Skydance의 인수안이 찬성 17억 4,300만 주 대 반대 1,630만 주로 압도적으로 가결됐다. 부채 포함 <span class="amount">$1,110억(₩165조)</span> 규모로, 할리우드 역사상 최대 M&amp;A가 최대 고비를 넘었다.</p>
-    <div class="article-body">
-      <p>주당 <span class="amount">$31(₩4.6만)</span>, 147% 프리미엄 조건의 이번 거래가 확정되면 HBO Max와 Paramount+, Warner Bros. 영화 스튜디오와 Paramount 영화 스튜디오, CNN과 CBS가 단일 지붕 아래 결합된다. David Ellison(Skydance 창업자)이 합병 법인 CEO를 맡는다.</p>
-      <div class="pull-quote">
-        <p>주주 승인은 이 역사적 거래를 완성하는 또 하나의 핵심 이정표다.</p>
-        <cite>&mdash; David Zaslav, WBD CEO (Apr 23, 2026)</cite>
-      </div>
-      <p>이번 딜의 숨은 주역은 걸프 국부펀드다. 사우디 공공투자펀드(PIF) <span class="amount">$100억(₩14.9조)</span>을 포함해 아부다비 L'imad Holding, 카타르 투자청(QIA)이 합산 <span class="amount">$240억(₩35.7조)</span>의 지분 투자를 결정했다. 세 SWF 모두 의결권을 포기해 미국 CFIUS·유럽 반독점 심사 부담을 최소화하는 구조다. 중국 자본이 할리우드에서 후퇴한 빈자리를 걸프 자본이 조용히 채우는 패턴의 첫 대형 사례다.</p>
-      <p>다만 미국 법무부와 EU 경쟁당국의 반독점 심사가 남아 있다. 반대 진영에서는 &ldquo;이 거래는 이미 과도하게 집중된 미디어 생태계를 더욱 굳힌다&rdquo;며 주 차원 소송 가능성을 열어뒀다. Zaslav의 퇴직금 패키지는 주주 자문 투표에서 부결됐지만 비구속적 의견이라 이사회 결정에 달렸다. Paramount는 Q3 2026 클로징을 목표로 하고 있다.</p>
-    </div>
-    <span class="source">출처: <a href="https://www.bloomberg.com/news/articles/2026-04-23/warner-bros-investors-approve-110-billion-paramount-merger" target="_blank">Bloomberg</a> &middot; <a href="https://variety.com/2026/film/news/warner-bros-discovery-paramount-shareholder-approval-zaslav-pay-package-1236727798/" target="_blank">Variety</a> &middot; <a href="https://deadline.com/2026/04/warner-bros-shareholders-back-sale-to-paramount-key-vote-1236868751/" target="_blank">Deadline</a> (Apr 23)</span>
-  </article>
-
-  <div class="hero-sidebar">
-    <article class="sidebar-card">
-      <span class="tag tag-us">US</span><span class="tag-cat">M&amp;A &middot; INV</span>
-      <h2 class="article-title">Netflix, LA 역사적 Radford 스튜디오 <span class="amount">$3.3억(₩4,904억)</span>에 인수 &ldquo;사실상 타결&rdquo;</h2>
-      <div class="article-body">
-        <p>Goldman Sachs가 압류 보유 중인 Radford Studio Center(LA Studio City)를 Netflix가 약 <span class="amount">$3.3억(₩4,904억)</span>에 인수하는 협상이 &ldquo;all but done(사실상 타결)&rdquo; 됐다고 THR이 4월 21일 보도했다. 22개 사운드스테이지, 3개 야외 세트, 18동 오피스 빌딩을 갖춘 약 100년 역사의 스튜디오로, &lt;Seinfeld&gt;·&lt;That &apos;70s Show&gt; 등이 제작된 곳이다.</p>
-        <p>Radford는 2021년 ViacomCBS가 Hackman Capital에 <span class="amount">$18.5억(₩2.7조)</span>에 매각했으나 금리 인상 직격탄에 Goldman Sachs로 넘어갔다. Netflix는 올 연말 만료되는 Sunset Bronson Studios 임대 계약 갱신을 포기하고 &lsquo;임차에서 소유&rsquo;로 전략 전환하는 셈이다.</p>
-      </div>
-      <span class="source">출처: <a href="https://www.hollywoodreporter.com/business/business-news/netflix-los-angeles-radford-1236571301/" target="_blank">THR</a> &middot; <a href="https://deadline.com/2026/04/netflix-radford-studios-1236867662/" target="_blank">Deadline</a> &middot; <a href="https://www.bloomberg.com/news/articles/2026-04-21/netflix-said-to-be-in-talks-for-la-studio-lot-seized-by-goldman" target="_blank">Bloomberg</a> (Apr 21&ndash;23)</span>
-    </article>
-
-    <article class="sidebar-card">
-      <span class="tag tag-us">US</span><span class="tag-cat">AI &middot; REG</span>
-      <h2 class="article-title">YouTube, AI 딥페이크 탐지 연예계 전면 개방 — CAA·UTA·WME 협력, NO FAKES Act 지지</h2>
-      <div class="article-body">
-        <p>4월 21일 YouTube가 AI 생성 유명인 합성 영상을 탐지·삭제 요청할 수 있는 &lsquo;초상 탐지(Likeness Detection)&rsquo; 기능을 연예 업계 전반으로 확장했다. CAA·UTA·WME·Untitled Management 4대 에이전시가 협력해, 배우 본인이 자체 채널이 없어도 AI 딥페이크를 신고할 수 있다.</p>
-        <p>Content ID 방식을 응용해 AI 얼굴 합성 영상을 자동 감지하고 삭제 청구 또는 저작권 신청을 유도하는 구조다. YouTube는 미 의회에서 심사 중인 &lsquo;NO FAKES Act&rsquo;(동의 없는 AI 초상·목소리 복제 금지) 지지 로비도 병행하고 있다.</p>
-      </div>
-      <span class="source">출처: <a href="https://techcrunch.com/2026/04/21/youtube-expands-its-ai-likeness-detection-technology-to-celebrities/" target="_blank">TechCrunch</a> &middot; <a href="https://www.hollywoodreporter.com/business/digital/youtube-ai-deepfake-detection-tool-1236569593/" target="_blank">THR</a> &middot; <a href="https://blog.youtube/news-and-events/youtube-likeness-detection-ai-protection/" target="_blank">YouTube Blog</a> (Apr 21)</span>
-    </article>
-  </div>
+<!-- TL;DR -->
+<section class="tldr" id="tldr">
+  <div class="tldr-label">이번 주 이슈 요약</div>
+  <h2 class="tldr-header">합병은 찬성, 보상은 반대 &mdash; 그리고 AI와 페스티벌의 경계가 동시에 흔들렸다.</h2>
+  <ul class="tldr-list">
+    <li><span class="tldr-num">01</span>WBD 주주는 Paramount 합병은 압도적으로 통과시켰지만, 떠나는 자슬라브 CEO의 보상안은 부결시켰다.</li>
+    <li><span class="tldr-num">02</span>아이치이의 AI 배우 데이터베이스가 공개 24시간 만에 톱스타들의 집단 부인으로 역풍을 맞았다.</li>
+    <li><span class="tldr-num">03</span>Coachella가 &lsquo;프리미엄 천장&rsquo;에 닿은 주, Sony와 UMG는 일본에서 페스티벌 합작법인을 띄웠다.</li>
+  </ul>
+  <nav class="tldr-toc">
+    <span>바로가기 &middot;</span>
+    <a href="#insights">주간 인사이트</a>
+    <a href="#news-global">글로벌</a>
+    <a href="#news-us">미국</a>
+    <a href="#news-cn">중국</a>
+    <a href="#news-jp">일본</a>
+  </nav>
 </section>
 
-<!-- 3-COL -->
-<section class="col-section">
-
-  <div class="col">
-    <div class="col-header">China</div>
-    <article class="col-article">
-      <span class="tag tag-cn">CN</span><span class="tag-cat">AI &middot; HR</span>
-      <h3 class="article-title">아이치이 &lsquo;AI 배우 데이터베이스&rsquo; 100인 공개하자 연예인 집단 부인 &mdash; &ldquo;동의한 적 없다&rdquo; 소셜 미디어 성명 봇물</h3>
-      <div class="article-body">
-        <p>4월 21일 아이치이(iQIYI)가 베이징 컨퍼런스에서 100여 명 이상의 배우·연예인이 등록된 AI 배우 데이터베이스를 공개하자, 중국 소셜미디어에서 즉각 반발이 쏟아졌다. 임원이 &ldquo;AI 드라마 제작자들이 배우 초상을 합법적으로 활용할 수 있다&rdquo;고 설명하자 등록됐다는 연예인들이 줄지어 &ldquo;나는 서명한 적 없다&rdquo;는 성명을 냈다.</p>
-        <p>배경에는 5일 전 인기 배우 易烊千玺(이양천희) 소속사가 아이치이가 동의 없이 배우의 AI 드라마를 유포했다며 법적 경고를 발송한 사건도 있었다. 아이치이는 지난주 자체 AI 영상 에이전트 &lsquo;나도우 Pro(Nadou Pro)&rsquo; 전상업 테스트를 개시했다. 시가총액이 한때 <span class="amount">$312.8억(₩4.6조)</span>에서 현재 <span class="amount">$13억(₩1,932억)</span>으로 급락한 플랫폼이 AI를 생존 수단으로 활용하는 과정에서, 배우의 노동권과 초상권이 정면 충돌하는 양상이다.</p>
-      </div>
-      <span class="source">출처: <a href="https://hongkongfp.com/2026/04/21/outrage-in-china-after-streaming-site-iqiyi-debuts-ai-actor-database/" target="_blank">Hong Kong Free Press</a> &middot; <a href="https://www.yicaiglobal.com/news/first-chinese-premium-ai-generated-long-drama-may-debut-in-third-quarter-tencent-video-ceo-says" target="_blank">Yicai Global</a> (Apr 21)</span>
-    </article>
-
-    <article class="col-article">
-      <span class="tag tag-cn">CN</span><span class="tag-cat">REG &middot; AI</span>
-      <h3 class="article-title">중국 CAC, AI &lsquo;디지털 인간&rsquo; 규제 초안 공개 &mdash; 상시 표시 의무·딥페이크 동의 금지·미성년자 보호</h3>
-      <div class="article-body">
-        <p>중국 사이버공간관리국(CAC)이 4월 3일 &lsquo;인간형 대화 AI 서비스 관리 잠정 조치 초안&rsquo;을 발표하고 5월 6일까지 의견 수렴 중이다. AI·디지털 모델링·그래픽 기술로 만든 가상 인간이 공개 서비스에 등장할 경우 소비자에게 보이는 위치에 &ldquo;디지털 인간&rdquo; 표시를 상시 노출해야 한다. 당사자 동의 없는 딥페이크 클론 생성 금지, 미성년자에게 가상 친밀 관계 서비스 제공 금지도 포함됐다.</p>
-        <p>엔터·인플루언서·라이브커머스·고객서비스 등 광범위한 분야가 적용 대상이다. 위반 시 벌금은 <span class="amount">¥1만~20만 위안($1,400~$2.8만/₩208만~4,161만)</span>으로 제재 수위는 낮지만, 표시 의무 자체가 AI 생성 인플루언서·버추얼 아이돌 산업에 직접 타격을 줄 수 있다는 분석이 나온다.</p>
-      </div>
-      <span class="source">출처: <a href="https://techxplore.com/news/2026-04-china-rein-ai-digital-humans.html" target="_blank">TechXplore</a> &middot; <a href="https://www.chinalawvision.com/2026/04/data-protection-privacy/analysis-of-chinas-draft-administrative-measures-for-digital-virtual-human-information-services/" target="_blank">China Law Vision</a> &middot; <a href="https://news.cgtn.com/news/2026-04-10/China-drafts-new-rules-for-AI-humans-and-children-s-addictive-tech-1Md4bQ5iLpS/p.html" target="_blank">CGTN</a> (Apr 3, Apr 19&ndash;20)</span>
-    </article>
-  </div>
-
-  <div class="col">
-    <div class="col-header">Japan</div>
-    <article class="col-article">
-      <span class="tag tag-jp">JP</span><span class="tag-cat">IP &middot; OUT</span>
-      <h3 class="article-title">도에이, 창립 75주년에 게임 브랜드 &lsquo;Toei Games&rsquo; 공식 출범 &mdash; 기존 IP 아닌 오리지널 IP 창출에 집중</h3>
-      <div class="article-body">
-        <p>4월 21일, &lt;원피스&gt;·&lt;드래곤볼&gt; 제작사 도에이(東映)가 자체 게임 퍼블리싱 브랜드 Toei Games를 공식 출범했다. 창립 75주년 기념 사업으로, PC(Steam) 선출시 후 Nintendo Switch·PlayStation·Xbox 확장을 목표로 한다. Kairosoft가 디자인한 로고도 공개됐으며, 첫 타이틀은 4월 24일 발표 예정이다.</p>
-        <p>핵심은 &ldquo;기존 도에이 IP의 게임화가 아닌 완전 오리지널 IP 창출&rdquo;이라는 방침이다. 세계 시장을 겨냥해 일본 안팎 크리에이터를 기용한다고 밝혔다. 일본 정부가 게임 수출 253% 성장 목표를 내건 시점에, 콘텐츠 대기업이 배급 내재화로 응하는 구조다.</p>
-      </div>
-      <span class="source">출처: <a href="https://www.animenewsnetwork.com/news/2026-04-21/toei-entertainment-studio-launches-game-brand/.236627" target="_blank">Anime News Network</a> &middot; <a href="https://www.gematsu.com/2026/04/toei-company-establishes-toei-games" target="_blank">Gematsu</a> &middot; <a href="https://www.nintendolife.com/news/2026/04/toei-company-establishes-new-gaming-publishing-brand" target="_blank">Nintendo Life</a> (Apr 21)</span>
-    </article>
-
-    <article class="col-article">
-      <span class="tag tag-jp">JP</span><span class="tag-cat">DATA &middot; OUT</span>
-      <h3 class="article-title">Nintendo Switch 2, 일본 콘솔 점유율 ~90% &mdash; 〈토모다치 라이프〉 주간 56.5만 장으로 시장 독식</h3>
-      <div class="article-body">
-        <p>4월 23일 주간 차트 기준 Nintendo Switch 2는 주간 4만 4,280대로 일본 콘솔 판매 1위를 유지했다. 레거시 Switch 패밀리 합산 3만 1,496대보다 40% 이상 높으며, 닌텐도가 일본 콘솔 시장에서 약 90%에 가까운 점유율을 기록하는 것은 Famicom 시대 이후 처음이다. 누적 판매는 515만 대를 돌파했다.</p>
-        <p>소프트웨어 1위는 〈Tomodachi Life: Living the Dream〉으로 주간 56만 5,405장(패키지)을 기록했다. 콘솔 전용 하드웨어와 대형 타이틀의 조합이 모바일·PC 공세 속에서도 일본 게임 시장을 이끄는 지표다. Nintendo는 2026년 3월 결산 기준 Switch 2 판매 호조를 실적 견인 요인으로 공식 언급한 바 있다.</p>
-      </div>
-      <span class="source">출처: <a href="https://mynintendonews.com/2026/04/16/japan-nintendo-switch-2-reigns-supreme-and-pokemon-pokopia-remains-no-1/" target="_blank">My Nintendo News</a> &middot; <a href="https://www.nintendolife.com/news/2026/04/japanese-charts-switch-2-hits-another-milestone-as-pokemon-pokopias-reign-continues" target="_blank">Nintendo Life</a> &middot; <a href="https://www.vgchartz.com/article/467502/2026-japan-sales-comparison-charts-through-march-switch-2-vs-ps5-vs-xbox-series-vs-switch/" target="_blank">VGChartz</a> (week ending Apr 23)</span>
-    </article>
-  </div>
-
-  <div class="col">
-    <div class="col-header">Global</div>
-    <article class="col-article">
-      <span class="tag tag-global">Global</span><span class="tag-cat">DATA &middot; OUT</span>
-      <h3 class="article-title">칸 2026 경쟁 부문 16편 추가 &mdash; 박찬욱 심사위원장·피터 잭슨·바브라 스트라이샌드 명예 황금종려상</h3>
-      <div class="article-body">
-        <p>4월 22일 제79회 칸 영화제가 경쟁 부문 추가 작품 16편을 발표했다. Zachary Wigon 감독의 공포 영화 〈Victorian Psycho〉(마이카 먼로 주연), Judith Godrèche 감독 데뷔작 〈A Girl&rsquo;s Story〉, Diego Luna 주연의 〈Ashes〉 등이 이름을 올렸다. 올해 경쟁 부문은 21편, 3개 대륙, 여성 감독 5명이 포함됐다.</p>
-        <p>박찬욱 감독이 주경쟁 부문 심사위원장을 맡는다. Peter Jackson과 Barbra Streisand에게는 명예 황금종려상이 수여된다. 개막작은 Pierre Salvadori 감독의 프랑스 시대 코미디 〈The Electric Kiss〉며, 영화제는 5월 12&ndash;23일 칸에서 열린다. 한국 감독이 칸 심사위원장을 맡는 것은 이번이 두 번째다.</p>
-      </div>
-      <span class="source">출처: <a href="https://variety.com/2026/film/festivals/cannes-victorian-psycho-maika-monroe-1236727917/" target="_blank">Variety</a> &middot; <a href="https://www.festival-cannes.com/en/press/press-releases/additions-to-the-selection-of-the-79th-festival-de-cannes/" target="_blank">Festival de Cannes</a> (Apr 22)</span>
-    </article>
-  </div>
-
-</section>
-
-<!-- ANALYSIS -->
-<section class="analysis">
+<!-- ANALYSIS (insights first) -->
+<section class="analysis" id="insights">
+  <p class="analysis-intro">이번 주 9건의 뉴스는 서로 다른 지역·업종에서 왔지만, 공통적으로 &ldquo;누가 규칙을 쓰는가&rdquo;라는 질문을 남겼다. 주주와 경영진, 플랫폼과 배우, 북미·유럽·아시아 &mdash; 권력의 중심이 이동하는 분기점들을 세 개의 각도로 읽는다.</p>
   <div class="analysis-header">인사이트</div>
   <div class="analysis-grid">
     <div class="analysis-item">
       <div class="analysis-num">01</div>
-      <h3>걸프 SWF의 할리우드 진입 &mdash; 중동 자본이 조용히 쓰는 엔터테인먼트 지정학의 새 장</h3>
+      <h3>&lsquo;합병은 찬성, 보상은 반대&rsquo; &mdash; WBD 주총이 드러낸 엔터 경영진 급여의 정당성 위기</h3>
       <div class="analysis-tier analysis-tier-signal">
         <div class="analysis-label analysis-label-signal">신호</div>
-        <p>Paramount-WBD <span class="amount">$1,110억</span> 딜의 재무 기반 <span class="amount">$240억(₩35.7조)</span>을 사우디 PIF, 아부다비 L'imad, 카타르 QIA가 제공했다. 세 SWF 모두 의결권을 포기했다. 중동 국부펀드가 할리우드 최대 M&amp;A의 침묵의 재무 투자자로 등장한 첫 사례다.</p>
+        <p>같은 날, 같은 주주들이 Paramount 합병은 압도적 찬성으로 통과시키고 자슬라브 CEO 보상 패키지는 반대표로 부결시켰다. 자문 투표는 구속력이 없지만, 합병을 승인한 주주가 떠나는 CEO의 페이체크에 &ldquo;NO&rdquo;라고 답한 조합은 보기 드물다. 한편 1분기 Netflix는 WBD전에서 물러난 대가로 <span class="amount">$28억</span>의 해지 수수료를 수령했다.</p>
       </div>
       <div class="analysis-tier analysis-tier-pattern">
         <div class="analysis-label analysis-label-pattern">맥락</div>
-        <p>걸프 SWF의 엔터테인먼트 투자는 스포츠(LIV 골프, PIF의 잉글리시 프리미어리그 구단)에서 콘텐츠·스튜디오로 확장 중이다. 미국은 의결권 포기 구조를 통해 CFIUS 심사를 회피하는 방식에 암묵적으로 동의하고 있다. 중국 자본이 미국 엔터에서 후퇴한 2018년 이후, 대규모 외부 자본의 공백은 아시아 자본이 아닌 걸프 자본이 채우고 있다. 이 패턴이 스튜디오 수준으로 올라선 것은 이번이 처음이다.</p>
+        <p>미국 미디어 업계 경영진 급여 문제는 Disney의 아이거·밥 차펙 교체기부터 이어져 온 장기 쟁점이다. 주가 부진, 레이오프, 작가·배우 파업이 누적된 상태에서 합병으로 회사가 사라지는 CEO에게 수백억 원대 golden parachute가 지급되는 구조에 주주들이 공개 반대 의사를 표시한 것은 ISS·Glass Lewis의 가이던스가 견고해진 결과이기도 하다. 반면 한국은 &lsquo;경영진 보상&rsquo;이 아직 주총 자문 투표 안건으로 제도화되지 않았다.</p>
       </div>
       <div class="analysis-tier analysis-tier-implication">
         <div class="analysis-label analysis-label-implication">전략</div>
-        <p>투자자·자본시장 참여자에게는 기회다. 걸프 SWF가 의결권 없이 순수 자본 포지션으로 할리우드 대형 딜에 들어온다는 것은, 동일한 구조로 한국 엔터테인먼트 자산에 접근할 가능성도 열려 있음을 뜻한다. 사우디 PIF는 이미 e스포츠·게임 분야에서 복수의 한국 기업과 접촉한 바 있다. HYBE·카카오엔터·CJ ENM 같은 중대형 한국 엔터 기업에 걸프 SWF발 전략적 투자 논의가 현실적 가능성으로 올라설 수 있다. 이 대화가 열린다면 어떤 조건에 동의할 수 있고, 어떤 조건은 거절해야 하는지 지금부터 정리해두는 것이 손해는 아닐 것이다.</p>
+        <p>대형 스튜디오·레이블(HYBE, CJ ENM, 카카오엔터, 스튜디오드래곤)에게는 경고다. 아직 한국 상법상 경영진 보상 Say-on-Pay 의무화는 없지만, 국민연금공단과 글로벌 LP(BlackRock·Vanguard 등)는 피투자사에 대한 스튜어드십 코드 적용을 강화 중이다. WBD 건은 &ldquo;합병·매각 시 떠나는 경영진의 보상 설계가 향후 주주 저항 1순위&rdquo;라는 선례를 남겼다. 카카오엔터·SM 매각·인수 협상에서 경영진이 받는 리텐션·퇴직 보너스 구조가 언제까지 &ldquo;비공개 관행&rdquo;으로 남을 수 있는지, 커버리지 노출 대비가 필요하다. 지금 피칭 덱에 &ldquo;임원 보상 거버넌스&rdquo; 슬라이드 한 장이 없다면, 다음 라운드에서 발목 잡힐 수 있다.</p>
       </div>
     </div>
     <div class="analysis-item">
       <div class="analysis-num">02</div>
-      <h3>AI 초상권 전쟁의 두 경로 &mdash; 중국은 플랫폼이 먼저, 미국은 플랫폼+입법 병행</h3>
+      <h3>AI 배우 데이터베이스 공개 일주일, &lsquo;역할 단위 계약&rsquo; 프레임의 첫 크랙</h3>
       <div class="analysis-tier analysis-tier-signal">
         <div class="analysis-label analysis-label-signal">신호</div>
-        <p>같은 날(4월 21일), 아이치이는 AI 배우 데이터베이스를 공개했고 YouTube는 AI 딥페이크 탐지를 에이전시 수준으로 확장했다. 양쪽 모두 &lsquo;배우의 얼굴·목소리를 AI가 활용하는 문제&rsquo;를 다루지만, 방향은 정반대다. 아이치이는 활용을 위한 플랫폼, YouTube는 보호를 위한 플랫폼이다.</p>
+        <p>아이치이가 4월 20일 117명 규모의 AI 아티스트 데이터베이스를 공개한 지 24시간 만에 장뤄윈·위허웨이 등 톱 배우들이 &ldquo;서명한 적 없다&rdquo;고 집단 부인했다. 웨이보 해시태그 &lsquo;#아이치이가 미쳤다&rsquo;가 1위를 기록했고, 회사는 &ldquo;오해&rdquo;라고 해명했다. 지난 호에서 짚은 CEO 공위의 &lsquo;역할 단위 계약&rsquo; 프레임이 공개 일주일 만에 신뢰 위기를 맞았다.</p>
       </div>
       <div class="analysis-tier analysis-tier-pattern">
         <div class="analysis-label analysis-label-pattern">맥락</div>
-        <p>미국(YouTube + NO FAKES Act 로비)은 플랫폼 자율 규제와 연방 입법을 병행하며 배우 보호 체계를 구축 중이다. 중국(아이치이 데이터베이스)은 플랫폼이 먼저 시장을 만들고 규제는 후행하는 구조다. CAC의 AI 디지털 인간 규제 초안은 그 후행 규제의 예고편이다. 한국은 아직 어느 쪽도 아니다 — 자율 규제 플랫폼도 없고, 연방 입법 논의도 없다.</p>
+        <p>사태의 본질은 &lsquo;기술이 계약을 앞질렀다&rsquo;가 아니라, 계약의 권리 객체(이미지·음성·퍼포먼스 데이터)와 사용 주체(플랫폼·AIGC 창작자·시청자)의 관계가 아직 정의되지 않은 상태에서 플랫폼이 선제적으로 &ldquo;등록 의향서&rdquo;라는 중간 단계를 만들어버린 데 있다. 미국 SAG-AFTRA의 &lsquo;디지털 레플리카&rsquo; 조항이 수년간의 파업 끝에 정립된 것과 대비되면, 중국 모델은 플랫폼 주도 속도전이다. 배우 측이 법적 대응 수단을 아직 못 찾은 상태에서 여론(웨이보)이 1차 방어선이 된다.</p>
       </div>
       <div class="analysis-tier analysis-tier-implication">
         <div class="analysis-label analysis-label-implication">전략</div>
-        <p>배우·탤런트 매니지먼트에게는 경고다. 한국 배우가 지금 서명하는 드라마·광고·OTT 계약서 대부분에는 &lsquo;AI 초상 활용 조항&rsquo;이 없다 — 그리고 조항 부재는 법원 해석에 따라 &lsquo;포괄 허용&rsquo;이 될 수 있다. BH엔터·킹콩by스타쉽 같은 매니지먼트사들이 지금 계약서 표준안에 &lsquo;AI 활용 범위·기간·플랫폼 제한&rsquo; 조항을 신설하지 않으면, 3년 후에는 아이치이 사태가 한국판으로 재현될 가능성이 있다. 지금 협상 테이블에서 &lsquo;AI 조항&rsquo;을 꺼내는 것이 불편해 보일 수 있지만, 꺼내지 않는 것이 더 위험하다.</p>
+        <p>배우·탤런트 매니지먼트(BH, 킹콩by스타쉽, 사람엔터테인먼트 등)에게는 기회다. 아이치이 사례는 &ldquo;플랫폼이 일방적으로 데이터베이스에 이름을 올릴 때 소속사가 즉각 공개 부인할 수 있는 커뮤니케이션 체계&rdquo;의 중요성을 드러냈다. 한국 매니지먼트가 지금 준비해야 할 것은 세 가지다: (1) 소속 배우 전원에 대한 &lsquo;AI 사용 옵트아웃 선언&rsquo; 표준 문구 정비, (2) 중국·일본 플랫폼 계약서에 &lsquo;AI 데이터베이스 등록 시 사전 서면 동의&rsquo; 조항 삽입, (3) SAG-AFTRA &lsquo;디지털 레플리카&rsquo; 조항을 번역·현지화한 내부 협상 템플릿. 대형 3사가 먼저 움직이면 업계 표준이 된다&mdash;지금 움직이는 곳이 표준을 쓴다.</p>
       </div>
     </div>
     <div class="analysis-item">
       <div class="analysis-num">03</div>
-      <h3>스트리밍에서 &lsquo;소유&rsquo;로 &mdash; Netflix Radford 매입이 시사하는 콘텐츠 인프라 경쟁의 다음 전선</h3>
+      <h3>페스티벌 합작의 국경 이동 &mdash; Nine by Nine, Coachella 포화, HYPE&middot;SM&middot;JYP&middot;YG 합작설</h3>
       <div class="analysis-tier analysis-tier-signal">
         <div class="analysis-label analysis-label-signal">신호</div>
-        <p>Netflix가 <span class="amount">$3.3억(₩4,904억)</span>에 물리적 스튜디오 부동산을 직접 매입하려 한다. 동시에 Paramount-WBD 합병으로 LA 내 스튜디오 공간을 소유한 메이저는 더 줄어든다. 스트리밍이 극장을 위협하던 시대에서, 이제 스트리밍이 스튜디오 부동산을 두고 경쟁하는 시대로 바뀌고 있다.</p>
+        <p>같은 주, Coachella는 매출 <span class="amount">$2억</span>·이익률 34%를 기록했지만 &lsquo;priced for perfection&rsquo; 경고가 따라붙었다. Sony Music Japan과 Universal Music Japan은 &lsquo;Nine by Nine&rsquo; 합작법인을 4월 1일 출범시켰고, 한국에서는 HYBE·SM·JYP·YG 4사 페스티벌 합작 검토설이 MBW를 통해 전해졌다. 글로벌 경쟁 레이블이 &lsquo;한 지역 시장&rsquo;에서 공동 리스크를 묶는 구조가 복수의 국가에서 동시에 감지된다.</p>
       </div>
       <div class="analysis-tier analysis-tier-pattern">
         <div class="analysis-label analysis-label-pattern">맥락</div>
-        <p>2015~2022년의 화두가 &lsquo;스트리밍 vs 극장&rsquo;이었다면, 2026년의 화두는 &lsquo;임차 vs 소유&rsquo;다. LA 스튜디오 임대료 급등, 합병으로 인한 공급 축소, AI 생성 콘텐츠 증가에 따른 물리적 제작 공간 수요 변화가 맞물린다. 도에이가 게임 배급 브랜드를 내재화하는 것도 같은 맥락 — IP 보유 기업이 배급·플랫폼까지 수직계열화하는 흐름이다.</p>
+        <p>Live Nation의 Ticketmaster 반독점 소송, AEG의 Goldenvoice 의존, 북미 페스티벌 티켓 프리미엄화는 &lsquo;대형 브랜드 페스티벌&rsquo; 사업의 북미 성장 천장을 드러냈다. 반면 아시아&mdash;특히 일본·한국·동남아&mdash;는 일본 음악과 K팝 글로벌 파급력, 아니메 연동 수요로 인해 미개척 블록으로 남아 있다. Nine by Nine의 경쟁자 공동 소유 구조는 &ldquo;시장을 함께 만들어야 각자 몫이 커진다&rdquo;는 판단이다.</p>
       </div>
       <div class="analysis-tier analysis-tier-implication">
         <div class="analysis-label analysis-label-implication">전략</div>
-        <p>플랫폼·유통사에게는 지금이 관망해야 할 국면이 아닐까? 한국 OTT(웨이브·티빙·왓챠)와 스튜디오(스튜디오드래곤·래몽래인 등)는 자체 제작 공간을 거의 보유하지 않는다. Netflix Radford 매입이 &lsquo;규모의 경제를 갖춘 플랫폼만이 인프라를 소유할 수 있다&rsquo;는 신호라면, 중소 제작사에는 공간 임차 협상력 약화로 이어질 수 있다. 반면 국내 대형 스튜디오 부지(예: CJ ENM 스튜디오 센터)를 보유한 기업에는 반사 이익의 여지가 있다. 이 방향이 한국 시장에서 유의미한 변수로 작용할 조건이 무엇인지 — 그 조건이 충족되기 전까지는 대기가 현명하다.</p>
+        <p>플랫폼·유통사(인터파크, 예스24, CJ ENM, 현대카드 슈퍼콘서트 등)는 관망이 합리적이다. Nine by Nine 첫 행사는 2027년이고, 한국 4사 합작은 아직 &lsquo;검토&rsquo; 단계다. 지금 한국 페스티벌 사업자가 서둘러 일본·동남아에 진출하기보다는 (1) Nine by Nine 첫 행사의 개최지·출연진 라인업, (2) HYBE·SM·JYP·YG 합작법인의 실제 설립 공시, (3) 일본·중국 정부의 자국 페스티벌 보조금 정책 변화 세 가지 지표가 확인되기 전까지 현재 포맷 최적화에 집중하는 것이 낫다.</p>
       </div>
     </div>
   </div>
+</section>
+
+<!-- GLOBAL (hero-style) -->
+<section class="hero" id="news-global">
+  <article class="hero-main">
+    <span class="tag tag-global">Global</span><span class="tag-cat">INV &middot; M&amp;A</span>
+    <h2 class="article-title">애크먼, UMG에 <span class="amount">$643억(₩94.9조)</span> 인수 제안 &mdash; &lsquo;빅3&rsquo; 레이블 행동주의 재편</h2>
+    <p class="article-lead">빌 애크먼의 Pershing Square가 암스테르담 상장 Universal Music Group에 주당 30.40유로(약 <span class="amount">$35/₩5.2만)</span> 현금·주식 혼합을 제안했다. 직전 종가 대비 78% 프리미엄, 총 거래가치 <span class="amount">€557.5억($643억/₩94.9조)</span> 규모다.</p>
+    <div class="article-body">
+      <p>Al Jazeera(4월 7일)·MBW 등 보도에 따르면 제안은 UMG 본사·Euronext Amsterdam 상장 구조 위에서 진행된다. 성사되면 &lsquo;빅3&rsquo; 가운데 최대 레이블이 행동주의 투자자 주도로 재편된다는 뜻이다. 애크먼 측 자본은 미국계이지만 거래 대상의 법인·상장·사업 구조는 유럽에 뿌리를 두고, 지배구조 관할은 네덜란드 법제가 된다. 미국식 행동주의와 유럽 상장사의 법적 틀이 맞부딪히는 지점이다.</p>
+      <p>경쟁 구도 역시 같은 주에 움직였다. Warner Music은 2월 Spotify와 신규 다년 계약을 체결해 CRB &lsquo;번들링&rsquo; 구조를 우회했고, 3월에는 Netflix와 아티스트 다큐 first-look 계약을 맺었다. Sony Music Japan은 UMG Japan과 합작법인 &lsquo;Nine by Nine&rsquo;을 출범시켜 아시아 페스티벌을 공동 리스크로 묶었다. 음악 권리 시장의 자본 구조 재편이 2026년 2분기의 핵심 테마로 부상하고 있다.</p>
+      <div class="pull-quote">
+        <p>미국식 행동주의 자본이 유럽 상장 레이블을 노릴 때, 지배구조의 관할은 어느 법제가 되는가.</p>
+        <cite>&mdash; Al Jazeera (Apr 7, 2026)</cite>
+      </div>
+      <p>UMG 측은 즉각적인 수락 신호를 내지 않았고, Pershing Square의 지분·자금 조달 구조 공개 수준도 제한적이다. 제안이 교섭 단계로 넘어갈지, 단발성 시그널로 끝날지는 5월 UMG 연례 주총 전후 커뮤니케이션에서 드러날 가능성이 높다. (1) UMG 이사회의 공식 답변 수위, (2) 블랙록·뱅가드 등 주요 기관 투자자의 스탠스 표명 여부, (3) 네덜란드 금융감독청(AFM)의 공개 매수 절차 해석 &mdash; 이 세 가지가 이후 흐름을 가르는 지점이 될 것으로 보인다.</p>
+    </div>
+    <span class="source">출처: <a href="https://www.aljazeera.com/economy/2026/4/7/billionaire-investor-ackman-makes-64bn-bid-for-universal-music-group" target="_blank">Al Jazeera</a> &middot; <a href="https://www.musicbusinessworldwide.com/warner-music-group-and-spotify-ink-new-deal-overriding-controversial-crb-bundling-payment-structure-in-the-us/" target="_blank">MBW</a> (Apr 2026)</span>
+  </article>
+
+  <div class="hero-sidebar">
+    <article class="sidebar-card">
+      <span class="tag tag-global">Global</span><span class="tag-cat">DATA &middot; OUT</span>
+      <h2 class="article-title">IMS 비즈니스 리포트 2026 &mdash; 전자음악 시장 <span class="amount">$151억(₩22.4조)</span>, 독일 1위·인도네시아 77%로 급성장</h2>
+      <div class="article-body">
+        <p>4월 22일 스페인 이비자에서 발표된 IMS Business Report 2026(MIDiA Research 마크 멀리건 집필)에 따르면, 2025년 글로벌 전자음악 시장 규모는 <span class="amount">$151억(₩22.4조)</span>으로 전년 대비 7% 성장했다. 2024년 성장률 6%에서 한 단계 가속했다.</p>
+        <p>국가별로는 독일이 Spotify 월간 리스너 6.04억 명으로 1위를 유지했고, 신흥 시장에서는 인도네시아가 전년 대비 77% 증가로 성장률 1위를 기록했다. 이비자 클럽 티켓 매출은 <span class="amount">€1.6억($1.87억/₩2,770억)</span>으로 1년 새 <span class="amount">€1,000만($1,170만/₩173억)</span> 늘었다. Billboard·DJ Mag·Beatportal이 동시 보도했다.</p>
+        <p>하위 장르에서는 BPM 180을 넘는 하드스타일·하드코어 비중이 3년 연속 확대, 독일 하드테크노 &lsquo;슈란츠(schranz)&rsquo; 업로드가 83% 급증했다. 전자음악의 지리적 중심이 북미에서 독일·인도네시아·이비자로 분산되는 구조가 수치로 확인됐다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.billboard.com/lists/ims-ibiza-2026-ims-business-report-key-takeaways-streaming/" target="_blank">Billboard</a> &middot; <a href="https://djmag.com/news/global-electronic-music-industry-value-hits-record-151-billion-ims-business-report-reveals" target="_blank">DJ Mag</a> &middot; <a href="https://www.beatportal.com/articles/1386171-ims-business-report-2026-global-dance-music-industry-now-worth-15.1-billion" target="_blank">Beatportal</a> (Apr 22)</span>
+    </article>
+  </div>
+</section>
+
+<!-- HERO (US) -->
+<section class="hero" id="news-us">
+  <article class="hero-main">
+    <span class="tag tag-us">US</span><span class="tag-cat">M&amp;A &middot; REG</span>
+    <h2 class="article-title">WBD 주주, Paramount 합병 &lsquo;압도적 찬성&rsquo; &mdash; 주당 <span class="amount">$31(₩4.6만)</span> 현금, 자슬라브 급여안은 부결</h2>
+    <p class="article-lead">4월 23일 Warner Bros. Discovery 임시 주주총회에서 Paramount Skydance의 합병안이 예비 집계 기준 압도적 찬성으로 통과됐다. 그러나 같은 날 상정된 데이비드 자슬라브 CEO 보상 패키지는 자문 투표에서 반대표에 밀렸다.</p>
+    <div class="article-body">
+      <p>WBD는 전 주식 현금 매수 조건(주당 <span class="amount">$31(₩4.6만)</span>)의 합병안을 주주 표결에 부쳤고, CNBC와 CNN은 주주들이 &ldquo;overwhelmingly&rdquo; 찬성했다고 전했다. 거래는 케이블 네트워크(TNT, CNN, Discovery Channel), HBO Max 스트리밍, Warner Bros. 스튜디오를 Paramount 산하로 편입시킨다. Variety에 따르면 Paramount CEO 데이비드 엘리슨(David Ellison)은 미국 법무부 반독점 심사와 유럽 집행위 승인을 거쳐 3분기 내(9월 말) 딜 클로징을 목표로 한다.</p>
+      <p>주목할 지점은 같은 날 상정된 두 번째 안건이다. WBD 이사회가 제안한 경영진 보상 패키지&mdash;특히 &lsquo;떠나는&rsquo; CEO 자슬라브에 대한 지급안&mdash;는 주주 자문 투표에서 반대가 다수였다. Variety는 이를 &ldquo;Vote Against Zaslav Pay Package&rdquo;로 보도했다. 자문 투표는 법적 구속력이 없어 이사회는 지급을 강행할 수 있지만, 합병을 승인한 같은 주주들이 보상안은 부결시킨 상징성은 적지 않다.</p>
+      <div class="pull-quote">
+        <p>주주는 Paramount에 WBD를 건네주었다. 그러나 자슬라브의 보상에는 찬성하지 않았다.</p>
+        <cite>&mdash; Variety (Apr 23, 2026)</cite>
+      </div>
+      <p>주정부 차원의 반독점 우려도 남아 있다. NBC News에 따르면 복수의 주 검사총장(AG)들이 이 딜을 면밀히 검토 중이며, 일부는 트럼프 행정부 연방 규제 당국이 &ldquo;정치적 이유로&rdquo; Paramount에 우호적 판단을 내릴 가능성을 의심한다. CinemaCon 2026에서 Paramount가 &ldquo;인수 후에도 극장 우선&rdquo;을 강조한 배경에는 이런 정치적·유통 업계 불안을 무마하려는 의도가 있었다는 해석이다(지난 호 참조).</p>
+      <p>한편 합병전에서 물러난 Netflix는 1분기에 Paramount로부터 <span class="amount">$28억(₩4,133억)</span> 규모의 계약 해지 수수료를 수령해 주당순이익이 2배로 뛰었다. 패배의 대가가 현금으로 들어오는 구조다.</p>
+    </div>
+    <span class="source">출처: <a href="https://www.cnbc.com/2026/04/23/warner-bros-discovery-shareholder-vote-paramount-deal.html" target="_blank">CNBC</a> &middot; <a href="https://www.cnn.com/2026/04/23/media/wbd-shareholders-approve-paramount-takeover" target="_blank">CNN</a> &middot; <a href="https://variety.com/2026/film/news/warner-bros-discovery-paramount-shareholder-approval-zaslav-pay-package-1236727798/" target="_blank">Variety</a> &middot; <a href="https://www.nbcnews.com/business/media/warner-bros-discovery-shareholders-approve-paramount-skydance-merger-rcna341529" target="_blank">NBC News</a> (Apr 23)</span>
+  </article>
+
+  <div class="hero-sidebar">
+    <article class="sidebar-card">
+      <span class="tag tag-us">US</span><span class="tag-cat">DATA &middot; GZ</span>
+      <h2 class="article-title">Netflix, 가격 또 인상 &mdash; 광고형 <span class="amount">$8.99</span>, 스탠다드 <span class="amount">$19.99</span>로</h2>
+      <div class="article-body">
+        <p>Deadline과 TheWrap의 3월 말~4월 초 보도에 따르면 Netflix는 전 구독 요금제를 일괄 인상했다. 광고 포함 기본형은 <span class="amount">$8.99/월(₩1.3만)</span>, 스탠다드(광고 없음)는 <span class="amount">$19.99/월(₩2.9만)</span>이 됐다. 직전 1분기 매출 <span class="amount">$122.5억(₩18.1조)</span>·연간 가이던스 <span class="amount">$507&ndash;517억(₩74.8&ndash;76.3조)</span>을 유지한 직후의 가격 조정이다.</p>
+        <p>가격 인상과 병행해 광고 사업 목표는 연 <span class="amount">$30억(₩4.4조)</span>으로 전년 대비 2배. 구독자 수 공개를 중단한 Netflix가 &lsquo;가입자당 매출(ARPU)&rsquo;을 새 성장 축으로 밀고 있다는 신호다. 지난 호에서 짚었듯 공동창업자 해스팅스의 6월 이사회 퇴임이 예정된 상황에서, 가격 정책이 새 경영진의 성적표가 된다.</p>
+      </div>
+      <span class="source">출처: <a href="https://variety.com/2026/tv/news/netflix-earnings-q1-2026-1236723851/" target="_blank">Variety</a> &middot; <a href="https://www.thewrap.com/industry-news/business/netflix-earnings-q1-2026/" target="_blank">TheWrap</a> (Apr 2026)</span>
+    </article>
+
+    <article class="sidebar-card">
+      <span class="tag tag-us">US</span><span class="tag-cat">DATA &middot; OUT</span>
+      <h2 class="article-title">Coachella 2026, 2주 매출 <span class="amount">$2억(₩2,952억)</span>&middot;이익률 34% &mdash; &lsquo;priced for perfection&rsquo; 경고</h2>
+      <div class="article-body">
+        <p>Coachella 2026(4월 10&ndash;12·17&ndash;19)은 2주간 총 매출 <span class="amount">$2억(₩2,952억)</span>·이익 약 <span class="amount">$6,870만(₩1,014억)</span>을 기록한 것으로 TheStreet·Ainvest가 집계했다. 총 관객 약 75만 명, 호스피탈리티 패키지는 <span class="amount">$5,000(₩738만)</span> 구간까지 판매됐다. AEG·Goldenvoice 모델 기준 이익률 34%.</p>
+        <p>같은 매체들은 &lsquo;priced for perfection&rsquo;&mdash;티켓 프리미엄화가 이미 한계에 근접했다는 신호도 짚었다. 티켓 상승이 참여자 구성을 VIP·브랜드 초청 비중으로 기울이면 일반 팬 층의 재생산이 약해진다. Sony&times;UMG의 Nine by Nine JV가 &lsquo;아시아&rsquo;를 겨냥한 배경도 북미 페스티벌 경제 포화 신호와 무관하지 않다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.thestreet.com/entertainment/coachella-2026-hits-200m-but-profit-isnt-what-youd-expect" target="_blank">TheStreet</a> &middot; <a href="https://www.ainvest.com/news/coachella-2026-200m-revenue-priced-perfection-margin-pressure-eroding-undercut-profits-2604/" target="_blank">Ainvest</a> (Apr 2026)</span>
+    </article>
+  </div>
+</section>
+
+<!-- 2-COL (CN / JP) -->
+<section class="col-section" style="grid-template-columns: 1fr 1fr;">
+
+  <div class="col" id="news-cn">
+    <div class="col-header">China</div>
+    <article class="col-article">
+      <span class="tag tag-cn">CN</span><span class="tag-cat">AI &middot; HR</span>
+      <h3 class="article-title">아이치이 &lsquo;AI 배우 데이터베이스&rsquo; 역풍 &mdash; 117명 중 톱스타 장뤄윈·위허웨이 &ldquo;동의한 적 없다&rdquo; 공개 부인</h3>
+      <div class="article-body">
+        <p>4월 20일 아이치이는 CEO 공위(龚宇)가 직접 &lsquo;나도우 Pro(NaDou Pro)&rsquo; AI 아티스트 데이터베이스를 공개하며 &ldquo;117명의 아티스트가 가입 의향서에 서명했다&rdquo;고 발표했다. 그러나 24시간도 지나지 않아 장뤄윈(张若昀), 위허웨이(于和伟) 등 톱 배우들이 소셜미디어에서 &ldquo;AI 권한 위임 계약에 서명한 적 없다&rdquo;며 집단 부인했다. 웨이보에서는 해시태그 &ldquo;#아이치이가 미쳤다(#爱奇艺疯了)&rdquo;가 트렌드 1위에 올랐다.</p>
+        <p>아이치이는 &ldquo;오해(misunderstanding)&rdquo;라며 &ldquo;아티스트가 이미지 사용을 통제한다&rdquo;고 해명했고, 데이터베이스는 &ldquo;확정된 AI 퍼포머 명단이 아니라 AIGC 창작자와의 매칭 인프라&rdquo;라고 설명했다. 그러나 TechNode·BigGo Finance에 따르면 법률 전문가는 &ldquo;아티스트 이미지 데이터가 플랫폼 모델 훈련에 사용되는 순간 모델 파인튜닝·데이터 유출·무단 2차 훈련 위험이 상존한다&rdquo;고 경고했다. 지난 호(4월 15일 공위 인터뷰) 당시 내세운 &lsquo;역할 단위 계약&rsquo; 프레임은 공개 일주일 만에 신뢰 위기를 맞았다.</p>
+      </div>
+      <span class="source">출처: <a href="https://hongkongfp.com/2026/04/21/outrage-in-china-after-streaming-site-iqiyi-debuts-ai-actor-database/" target="_blank">Hong Kong Free Press</a> &middot; <a href="https://technode.com/2026/04/21/iqiyis-ai-artist-library-faces-growing-storm-as-actors-deny-authorization/" target="_blank">TechNode</a> &middot; <a href="https://www.japantimes.co.jp/business/2026/04/21/tech/china-streaming-ai-actor-database/" target="_blank">Japan Times</a> (Apr 20&ndash;21)</span>
+    </article>
+
+    <article class="col-article">
+      <span class="tag tag-cn">CN</span><span class="tag-cat">DATA</span>
+      <h3 class="article-title">중국 박스오피스 &lsquo;저속 주간&rsquo; 누적 <span class="amount">$18.6억(₩2.7조)</span>, 전년 대비 &minus;49.8%</h3>
+      <div class="article-body">
+        <p>Variety에 따르면 4월 17&ndash;19일 주말 중국 박스오피스는 로컬 드라마 &lt;It&rsquo;s OK&gt;가 <span class="amount">¥1,970만($290만/₩42.8억)</span>으로 1위를 수성했다. 2위 &lt;Project Hail Mary&gt; <span class="amount">$220만(₩32.5억)</span>, 3위 &lt;Nobody But You 2&gt; <span class="amount">$210만(₩31억)</span>. 주말 총매출 <span class="amount">$1,780만(₩263억)</span>은 2026년 들어 가장 낮은 수준에 속한다.</p>
+        <p>연초 누적 박스오피스는 <span class="amount">$18.6억(₩2.7조)</span>으로 전년 동기 대비 49.8% 급감했다. 2월 춘절 흥행이 2025년 대비 38% 감소한 데 이어 4월에도 회복 신호가 약하다. 같은 기간 중국 국내에서는 단편극(短剧)·AI 생성 드라마가 편당 제작비를 10분의 1 수준으로 떨어뜨리며 모바일 시청 시간을 흡수 중이다. 극장 관객이 어디로 이동하는지에 대한 재측정이 필요한 시점이다.</p>
+      </div>
+      <span class="source">출처: <a href="https://variety.com/2026/film/asia/china-box-office-its-ok-quiet-weekend-1236725713/" target="_blank">Variety</a> &middot; <a href="https://variety.com/2026/film/asia/china-box-office-its-ok-top-spot-slow-weekend-1236720071/" target="_blank">Variety</a> (Apr 19&ndash;20)</span>
+    </article>
+  </div>
+
+  <div class="col" id="news-jp">
+    <div class="col-header">Japan</div>
+    <article class="col-article">
+      <span class="tag tag-jp">JP</span><span class="tag-cat">M&amp;A &middot; INV</span>
+      <h3 class="article-title">Sony Music &times; UMG, 일본 합작법인 &lsquo;Nine by Nine&rsquo; 출범 &mdash; 아시아 페스티벌 공동 운영</h3>
+      <div class="article-body">
+        <p>Music Business Worldwide·Digital Music News 보도에 따르면 Sony Music Entertainment Japan(SMEJ)과 Universal Music Japan이 합작법인 &lsquo;NINE BY NINE Inc.&rsquo;를 4월 1일 도쿄 시부야에 설립했다. 대표이사 사장은 UMJ 타마키 이치로(玉木一郎), 부사장은 SMEJ 오타니 히데히코(大谷英彦). 양사는 아시아 지역에서 일본 음악 페스티벌을 공동 기획·제작하고, 해외 진출을 꾀하는 일본 아티스트를 지원한다. 첫 행사는 2027년 예정. 출자 비율과 투자 규모는 공개되지 않았다.</p>
+        <p>글로벌 경쟁 레이블 2곳이 한 지역 시장에서 페스티벌 합작을 꾸리는 구조는 이례적이다. 아니메·소셜 미디어가 견인한 일본 음악 글로벌 주목도와 일본 아티스트 해외 투어 성과를 양사가 공동 리스크로 묶는 의사결정이다. 한편 한국에서는 HYBE·SM·JYP·YG 4사가 유사한 페스티벌 합작을 검토 중이라는 MBW 보도가 있었다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.musicbusinessworldwide.com/sony-music-and-umg-form-nine-by-nine-music-festivals-joint-venture-in-japan/" target="_blank">MBW</a> &middot; <a href="https://www.digitalmusicnews.com/2026/04/08/sony-music-universal-music-nine-by-nine-partnership/" target="_blank">Digital Music News</a> &middot; <a href="https://musically.com/2026/04/08/sony-music-and-umg-team-up-to-launch-music-festivals-in-asia/" target="_blank">Music Ally</a> (Apr 1&ndash;8)</span>
+    </article>
+
+    <article class="col-article">
+      <span class="tag tag-jp">JP</span><span class="tag-cat">IP &middot; OUT</span>
+      <h3 class="article-title">도호, 아니메 &lsquo;연 30시즌 양산&rsquo; 로드맵 &mdash; 2029년 20편, 2032년 30편 목표</h3>
+      <div class="article-body">
+        <p>Hollywood Reporter와 Outlook Respawn 보도에 따르면 도호(東宝)는 아니메 제작을 2029년까지 연 20시즌, 2032년까지 연 30시즌으로 확대하는 단계별 로드맵을 공식화했다. 도호는 2026년 2월기 세그먼트 개편을 통해 기존 3축(영화·연극·부동산)에 &lsquo;IP·애니메이션&rsquo;을 제4축으로 추가했고, TOHO Animation 부문의 기획·제작·라이선스를 분할·독립시킬 계획도 밝혔다.</p>
+        <p>지난 호에서 다룬 METI의 2033년 해외 애니 수출 <span class="amount">¥6조($407억/₩60조)</span> 목표와 연동되는 움직임이다. 정부가 블록버스터 IP 집중 지원을 공약한 주간에 업계 최상위 스튜디오가 생산량 목표를 구체 수치로 제시한 셈이다. 단, 연 30시즌은 현 일본 아니메 제작 생태계의 인력·스튜디오 캐파로는 상당한 도전이다&mdash;하청 구조 해외 이전 가속화 가능성에 관한 후속 관찰이 필요한 대목이다.</p>
+      </div>
+      <span class="source">출처: <a href="https://www.hollywoodreporter.com/business/business-news/japans-toho-moves-to-capitalize-on-europes-anime-boom-1236454699/" target="_blank">THR</a> &middot; <a href="https://respawn.outlookindia.com/pop-culture/pop-culture-news/toho-targets-30-anime-seasons-per-year-in-mass-production-push" target="_blank">Outlook Respawn</a> (Apr 2026)</span>
+    </article>
+  </div>
+
 </section>
 
 </div>
@@ -345,21 +401,21 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
     <div class="footer-brand">엔터문화연구소 주간 브리핑</div>
     <div class="footer-legal">
       본 뉴스레터는 AI 기반 큐레이션으로 제작되었으며, 인용된 모든 기사의 저작권은 원 매체에 귀속됩니다.<br>
-      모든 금액은 2026년 4월 24일 기준 환율($1 = ₩1,486)을 적용했습니다. 실제 환율과 차이가 있을 수 있습니다.
+      모든 금액은 2026년 4월 23일 기준 환율($1 = ₩1,481)을 적용했습니다. 실제 환율과 차이가 있을 수 있습니다.
     </div>
   </div>
   <div style="text-align:right;">
-    <div class="footer-fx">$1 = ₩1,486</div>
-    <div class="footer-tags">WBD &middot; Paramount &middot; Netflix &middot; Radford &middot; YouTube &middot; iQIYI &middot; CAC &middot; Toei Games &middot; Nintendo &middot; Cannes</div>
+    <div class="footer-fx">$1 = ₩1,481</div>
+    <div class="footer-tags">WBD &middot; Paramount &middot; Netflix &middot; UMG &middot; iQIYI &middot; Nine by Nine &middot; Toho &middot; Coachella</div>
   </div>
 </footer>
 
 <script>
 document.querySelectorAll('.tag-cat').forEach(function(el){
-  var tags=el.textContent.split('·').map(function(t){return t.trim();}).filter(Boolean);
+  var tags=el.textContent.split('\u00B7').map(function(t){return t.trim();}).filter(Boolean);
   el.innerHTML=tags.map(function(t){
     return '<a href="index.html?tag='+encodeURIComponent(t)+'">'+t+'</a>';
-  }).join(' · ');
+  }).join(' \u00B7 ');
 });
 </script>
 </body>
