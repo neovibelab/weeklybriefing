@@ -217,12 +217,21 @@ jobs:
         run: |
           # 1) 이전 호 복제로 시작
           cp "NEWSPAPER_${PREV_MMDD}.html" "NEWSPAPER_${PUB_MMDD}.html"
-          # 2) Claude에 섹션 치환 위임. 입력은 staging 파일 + 새 호 파일 한 개.
-          claude -p "CLAUDE.md STEP 5 HTML 제작 규칙 적용. 작업 대상 파일: NEWSPAPER_${PUB_MMDD}.html (이전 호 복제본).
+          F="NEWSPAPER_${PUB_MMDD}.html"
+          # 2) 헤더 메타는 결정적으로 sed 치환 (Claude 누락 방지). Verify 항목과 1:1 대응.
+          #    - <title>: 'YYYY.MM.DD' 점 포맷
+          #    - <div class="masthead-date">…</div>: PUB_KOR 그대로 (Verify가 &ndash; 정규화 + 짧은/풀 포맷 모두 허용)
+          # 구분자에 한글·하이픈이 섞여 있으니 '|'를 sed delimiter로 사용
+          sed -i -E "s|<title>엔터문화연구소 — 글로벌 주간 브리핑 [^<]*</title>|<title>엔터문화연구소 — 글로벌 주간 브리핑 ${PUB_DATE_DOT}</title>|" "$F"
+          sed -i -E "s|<div class=\"masthead-date\">[^<]*</div>|<div class=\"masthead-date\">${PUB_KOR}</div>|" "$F"
+          echo "[ok] header meta replaced: title=${PUB_DATE_DOT}, masthead=${PUB_KOR}"
+          # 즉시 자기검증 — 치환 실패면 워크플로 조기 종료
+          grep -q "<title>엔터문화연구소 — 글로벌 주간 브리핑 ${PUB_DATE_DOT}</title>" "$F" || { echo "::error::title 치환 실패"; exit 1; }
+          grep -qF "<div class=\"masthead-date\">${PUB_KOR}</div>" "$F" || { echo "::error::masthead 치환 실패"; grep masthead-date "$F" | head -3; exit 1; }
+          # 3) Claude에 본문 섹션 치환 위임. 헤더는 이미 처리되어 있음.
+          claude -p "CLAUDE.md STEP 5 HTML 제작 규칙 적용. 작업 대상 파일: NEWSPAPER_${PUB_MMDD}.html (이전 호 복제본, <title>·masthead-date는 이미 새 호 날짜로 치환 완료 — 건드리지 말 것).
           ${STAGING_DIR}/research-*.md, ${STAGING_DIR}/insights.html, ${STAGING_DIR}/tldr.html, ${STAGING_DIR}/headline.txt를 입력으로.
           치환할 영역(다른 곳 건드리지 말 것):
-            - <title> → '엔터문화연구소 — 글로벌 주간 브리핑 ${PUB_DATE_DOT}' (날짜는 점 구분 YYYY.MM.DD)
-            - 마스트헤드 날짜 → '${PUB_KOR}' 형식
             - issue-title 본문 → headline.txt 내용
             - TL;DR(이번 주 이슈 요약) section 내부 ul → tldr.html
             - 인사이트 섹션 analysis-item 3개 → insights.html
