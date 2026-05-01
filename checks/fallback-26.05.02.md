@@ -85,13 +85,14 @@
 
 ## 5. 생성 이슈
 
-GitHub Issue 등록 완료
+**#5** — GitHub Issue 등록 완료
 제목: `[fallback 26.05.02] 금 20:00 자동 발행 실패 재현/원인 조사 필요`
+URL: https://github.com/neovibelab/ntcc-weekly-briefing/issues/5
 
 ---
 
 ## 6. 다음 액션
 
-- GitHub Issue에서 워크플로우 로그 조회 및 실패 원인 확인
+- GitHub Issue #5에서 워크플로우 로그 조회 및 실패 원인 확인
 - 다음 금 20:00 자동 발행 시 모니터링 강화
 - 필요 시 워크플로우 retry 로직 추가 검토
